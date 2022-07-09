@@ -76,7 +76,7 @@ function parse($str)
 		case 'down':
 		return '已宕机';
 
-		case 'limitted':
+		case 'limited':
 		return '访问受限';
 	}
 }
