@@ -55,11 +55,25 @@
 
 - 轻量级任务记录，极致简洁的 UI 交互体验。
 
+### 🚀 [OwO-WinDeployer](https://github.com/Tommy131/OwO-WinDeployer)
+> WinPE 驱动的离线 Windows 部署方案
+
+- **核心功能**: 基于 WinPE 的离线安装器，支持批量部署与静默安装。
+- **技术亮点**: 自动化系统配置，零人工干预的部署体验。
+
+### 🛩️ [OwO-FlightAssistant](https://github.com/Tommy131/OwO-FlightAssistant)
+> 跨平台命令行工具与 AI 助手
+
+- **核心功能**: 强大的命令行工具集合，提供自动化任务解决方案。
+- **技术亮点**: 智能错误处理，实时通知与批量操作能力。
+
 ## 🔥 What I'm Working On
 
 - 🚀 **OwO-Tool-Box**: 持续集成更多网络调试与自动化运维工具。
 - 🛠️ **DevTools**: 开发更多能显著提升工作效率的开发者工具。
 - 📚 **Knowledge**: 在博客分享关于 Go 与系统安全的深度文章。
+- 🚀 **OwO-WinDeployer**: 打造极致简洁的离线 Windows 部署工具。
+- 🛩️ **OwO-FlightAssistant**: 开发强大的跨平台 CLI 与智能助手。
 
 ## 💡 Tech Stack & Tools
 
