@@ -6,7 +6,7 @@
 [![Website](https://img.shields.io/badge/Website-owoblog.com-blue)](http://www.owoblog.com)
 [![Instagram](https://img.shields.io/badge/Instagram-jay.jay2045-E4405F)](https://www.instagram.com/jay.jay2045)
 
-🌍 **Location:** China & Germany  
+🌍 **Location:** China & Germany
 ⏰ **Timezone:** UTC+02:00
 
 </div>
@@ -25,7 +25,7 @@
 ## 📈 GitHub Stats
 
 <div align="center">
-  
+
 ![Tommy131's GitHub stats](https://github-readme-stats.vercel.app/api?username=Tommy131&show_icons=true&theme=radical&hide_border=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Tommy131&layout=compact&theme=radical&hide_border=true)
@@ -50,11 +50,6 @@
 
 - 自动化证书生成流程，完美解决 Windows 远程桌面的安全警告问题。
 
-### 🔧 [Taskify](https://github.com/tommy131/taskify)
-> 高效的任务管理工具
-
-- 轻量级任务记录，极致简洁的 UI 交互体验。
-
 ### 🚀 [OwO-WinDeployer](https://github.com/Tommy131/OwO-WinDeployer)
 > WinPE 驱动的离线 Windows 部署方案
 
@@ -75,23 +70,24 @@
 - 🚀 **OwO-WinDeployer**: 打造极致简洁的离线 Windows 部署工具。
 - 🛩️ **OwO-FlightAssistant**: 开发强大的跨平台 CLI 与智能助手。
 
-## 💡 Tech Stack & Tools
+## 📦 Tech Stack & Tools
 
-```text
-Languages:   Go, PHP, Dart, JavaScript, Java, Shell, HTML/CSS
-Frameworks:  Gin, Laravel, Flutter, Node.js
-Tools:       Git, Docker, OpenSSL, Linux/Windows, Nginx
-Databases:   MySQL, Redis, MongoDB
+### 🛠️ Frameworks & Tools
 
-```
+| Category | Items |
+|----------|-------|
+| **Languages** | Go, PHP, Dart, JavaScript, Java, Shell, HTML/CSS, Python, TypeScript, C++, C, C#, SQL |
+| **Frameworks** | Gin, Laravel, Flutter, Node.js |
+| **Tools** | Git, Docker, OpenSSL, Linux/Windows, Nginx, MySQL, Redis, MongoDB, Cloudflare |
+| **Databases** | MySQL, Redis, MongoDB |
 
-## 📊 Contribution Activity
+### 🏆 Notable Projects
 
-<div align="center">
-
-![GitHub Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Tommy131\&theme=react-dark\&hide_border=true)
-
-</div>
+- **OwO-WinDeployer** — WinPE 驱动的离线 Windows 部署方案，支持批量静默安装
+- **OwO-FlightAssistant** — 跨平台命令行工具与 AI 助手，强大的任务自动化能力
+- **OwO-Tool-Box** — 个人专属的万能工具箱，集成网络性能测试、系统优化等实用脚本
+- **KuaishouParser** — 全网功能最全的快手短视频解析工具，支持高性能 API 接口
+- **OpenSSL-Windows-Issuer** — 自签发 Windows-RDP 加密证书的脚本库，解决远程桌面安全警告
 
 ## 🤝 Let's Connect
 
