@@ -1,0 +1,102 @@
+[
+  {
+    "mid": "2",
+    "name": "技术杂谈",
+    "slug": "web",
+    "type": "category",
+    "description": null,
+    "count": 12,
+    "order": "2",
+    "parent": "0"
+  },
+  {
+    "mid": "1",
+    "name": "默认分类",
+    "slug": "default",
+    "type": "category",
+    "description": "只是一个默认分类",
+    "count": 11,
+    "order": "1",
+    "parent": "0"
+  },
+  {
+    "mid": "9",
+    "name": "文章转载",
+    "slug": "reprinted",
+    "type": "category",
+    "description": null,
+    "count": 2,
+    "order": "1",
+    "parent": "1"
+  },
+  {
+    "mid": "11",
+    "name": "CMD/BAT",
+    "slug": "cmd-bat",
+    "type": "category",
+    "description": "适用于Windows NT系统的可执行脚本",
+    "count": 1,
+    "order": "8",
+    "parent": "2"
+  },
+  {
+    "mid": "6",
+    "name": "HTML",
+    "slug": "html",
+    "type": "category",
+    "description": null,
+    "count": 1,
+    "order": "4",
+    "parent": "2"
+  },
+  {
+    "mid": "10",
+    "name": "JS",
+    "slug": "js",
+    "type": "category",
+    "description": null,
+    "count": 2,
+    "order": "7",
+    "parent": "2"
+  },
+  {
+    "mid": "7",
+    "name": "Linux",
+    "slug": "linux",
+    "type": "category",
+    "description": null,
+    "count": 2,
+    "order": "5",
+    "parent": "2"
+  },
+  {
+    "mid": "5",
+    "name": "Nginx",
+    "slug": "nginx",
+    "type": "category",
+    "description": null,
+    "count": 3,
+    "order": "3",
+    "parent": "2"
+  },
+  {
+    "mid": "3",
+    "name": "PHP",
+    "slug": "php",
+    "type": "category",
+    "description": null,
+    "count": 2,
+    "order": "1",
+    "parent": "2"
+  },
+  {
+    "mid": "8",
+    "name": "Windows",
+    "slug": "win",
+    "type": "category",
+    "description": null,
+    "count": 3,
+    "order": "6",
+    "parent": "2"
+  }
+]

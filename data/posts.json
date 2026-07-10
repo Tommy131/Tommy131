@@ -1,0 +1,799 @@
+[
+  {
+    "cid": "35",
+    "slug": "35",
+    "url": "post.html?slug=35",
+    "title": "[指令] 遍历当前文件夹查找指定的字符串内容",
+    "date": "2022-07-03",
+    "modified": "2026-07-10",
+    "commentsNum": "2",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "7",
+        "name": "Linux",
+        "slug": "linux",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "5",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "众所周知，在Linux系统中遍历查找文件可以使用 find 指令。我们这里来一点高级的干货 (bushi): 上述指令将会在当前文件夹中遍历查找所有文件，并找出哪一个文件中包含 hello world 字样。 参数讲解 | 参数 | 说明 | | | | | ./ | 当前文件夹路径 | | type f | 指定查找格式， f 表示 file，仅查找文件 | | print0 | 将文件名分隔符...",
+    "source": "data/content/posts/35.md",
+    "description": "众所周知，在Linux系统中遍历查找文件可以使用 find 指令。我们这里来一点高级的干货 (bushi): find ./ -type f -print0 -exec | xargs -0 grep \"hello world\" 上述指令将会在当前文件夹中遍历查找所有文件，并找出哪一个文件中包含 hello world 字样。 ###参数讲解 ./ 当前文件夹路径 -type f 指定的格式， f...",
+    "tags": [
+      "web",
+      "linux"
+    ]
+  },
+  {
+    "cid": "29",
+    "slug": "29",
+    "url": "post.html?slug=29",
+    "title": "[注册表] 如何在鼠标右键菜单栏中创建一个选项",
+    "date": "2022-06-17",
+    "modified": "2023-03-05",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 0,
+        "order": "1",
+        "parent": "0"
+      },
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "8",
+        "name": "Windows",
+        "slug": "win",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "6",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "近日由于频繁需要在开发项目中使用 CMD , 所以每次都需要 Win + R 键呼出 CMD ，非常的麻烦。 于是乎搜索了一番，发现可以使用注册表解决这个问题，我们一起来看具体步骤: 使用 Win + R 键呼出运行, 然后输入 regedit 打开注册表。 找到 HKEY CLASSES ROOT 栏, 然后找到你想添加的位置。例如文件夹目录下, 则为 Directory 。 找到项 shell...",
+    "source": "data/content/posts/29.md",
+    "description": "近日由于频繁需要在开发项目中使用 CMD , 所以每次都需要 Win + R 键呼出 CMD ，非常的麻烦。 于是乎搜索了一番，发现可以使用注册表解决这个问题，我们一起来看具体步骤: 使用 Win + R 键呼出运行, 然后输入 regedit 打开注册表。 找到 HKEY_CLASSES_ROOT 栏, 然后找到你想添加的位置。例如文件夹目录下, 则为 Directory 。 找到项 shell...",
+    "tags": [
+      "default",
+      "web",
+      "win"
+    ]
+  },
+  {
+    "cid": "27",
+    "slug": "27",
+    "url": "post.html?slug=27",
+    "title": "[BAT] 关于指令 `set` 的问题",
+    "date": "2022-06-16",
+    "modified": "2022-06-16",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 1,
+        "order": "1",
+        "parent": "0"
+      },
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 2,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "11",
+        "name": "CMD/BAT",
+        "slug": "cmd-bat",
+        "type": "category",
+        "description": "适用于Windows NT系统的可执行脚本",
+        "count": 0,
+        "order": "8",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "最近刚开始学习Vue，由于没有使用vue cli脚手架，并且本地的编译环境并非Nginx设定的web目录，所以尝试使用 npm run build 之后每次都需要手动将编译好的 dist 目录移动到Nginx设定的web目录下，非常的麻烦。(也许有更方便的办法，但耐于我是初学者一时半会不知道如何正确配置，所以使用了如下的脚本) 然后我便有了之前的以下代码： 结果后来经过非常之久的脚本执行，发现 s...",
+    "source": "data/content/posts/27.md",
+    "description": "最近刚开始学习Vue，由于没有使用vue-cli脚手架，并且本地的编译环境并非Nginx设定的web目录，所以尝试使用 npm run build 之后每次都需要手动将编译好的 dist 目录移动到Nginx设定的web目录下，非常的麻烦。(也许有更方便的办法，但耐于我是初学者一时半会不知道如何正确配置，所以使用了如下的脚本) 然后我便有了之前的以下代码： @echo off chcp 65001...",
+    "tags": [
+      "default",
+      "web",
+      "cmd-bat"
+    ]
+  },
+  {
+    "cid": "26",
+    "slug": "26",
+    "url": "post.html?slug=26",
+    "title": "[转载] 线程安全和非线程安全",
+    "date": "2022-03-11",
+    "modified": "2022-03-11",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 3,
+        "order": "2",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "二者如何取舍 非线程安全是指多线程操作同一个对象可能会出现问题。而线程安全则是多线程操作同一个对象不会有问题。 线程安全必须要使用很多synchronized关键字来同步控制，所以必然会导致性能的降低。 所以在使用的时候，如果是多个线程操作同一个对象，那么使用线程安全的Vector；否则，就使用效率更高的ArrayList。 非线程安全!=不安全 有人在使用过程中有一个不正确的观点：我的程序是多线...",
+    "source": "data/content/posts/26.md",
+    "description": "二者如何取舍 非线程安全是指多线程操作同一个对象可能会出现问题。而线程安全则是多线程操作同一个对象不会有问题。 线程安全必须要使用很多synchronized关键字来同步控制，所以必然会导致性能的降低。 所以在使用的时候，如果是多个线程操作同一个对象，那么使用线程安全的Vector；否则，就使用效率更高的ArrayList。 非线程安全!=不安全 有人在使用过程中有一个不正确的观点：我的程序是多线...",
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "cid": "24",
+    "slug": "24",
+    "url": "post.html?slug=24",
+    "title": "[ES6 Fetch POST] 在操作Fetch中遇到的问题总结",
+    "date": "2021-04-13",
+    "modified": "2021-04-13",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 4,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "10",
+        "name": "JS",
+        "slug": "js",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "7",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "众所周知, 在现在前后端分离的大趋势下, 数据交互也变得复杂了起来。今天在写项目的时候用到了一个前端组件, 而且这个组件的数据传递方式就是传统的fetch。 问题所在: 前端的fetch请求写法正确, 但是PHP后端死活接收不到参数。在这耽搁了大概十多分钟后我受不了了，百度了半天才发现一个有用的方法，我这里转载进来，记录一下这个坑。 原文地址：点我访问 前端Fetch写法: 后端PHP写法: 以上...",
+    "source": "data/content/posts/24.md",
+    "description": "众所周知, 在现在前后端分离的大趋势下, 数据交互也变得复杂了起来。今天在写项目的时候用到了一个前端组件, 而且这个组件的数据传递方式就是传统的fetch。 问题所在: 前端的fetch请求写法正确, 但是PHP后端死活接收不到参数。在这耽搁了大概十多分钟后我受不了了，百度了半天才发现一个有用的方法，我这里转载进来，记录一下这个坑。 原文地址： 点我访问 ------ 前端Fetch写法: let...",
+    "tags": [
+      "web",
+      "js"
+    ]
+  },
+  {
+    "cid": "21",
+    "slug": "21",
+    "url": "post.html?slug=21",
+    "title": "[PHP_SESSION] SESSION自动失效的问题",
+    "date": "2021-04-11",
+    "modified": "2021-11-05",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 5,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "3",
+        "name": "PHP",
+        "slug": "php",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "1",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "最近写项目的时候会发现一个很奇怪的问题, 明明启动了Session，并且PHP设置的 Cookie sessionid 也没有到期, 但是过了一定的时间, 之前设置的Session数据却不翼而飞, 造成错误。于是我搜索了一番发现, 只需要修改 php.ini 中的一个关键设置即可。下面是我在项目中实施的热修复: 上面的 session.gc maxlifetime 就是修改Session的 最大生...",
+    "source": "data/content/posts/21.md",
+    "description": "最近写项目的时候会发现一个很奇怪的问题, 明明启动了Session，并且PHP设置的 Cookie_sessionid 也没有到期, 但是过了一定的时间, 之前设置的Session数据却不翼而飞, 造成错误。于是我搜索了一番发现, 只需要修改 php.ini 中的一个关键设置即可。下面是我在项目中实施的热修复: <?php // Your codes; if(session_status() !=...",
+    "tags": [
+      "web",
+      "php"
+    ]
+  },
+  {
+    "cid": "20",
+    "slug": "20",
+    "url": "post.html?slug=20",
+    "title": "[NGINX] Web环境下的日志记录格式(log_format)",
+    "date": "2021-04-11",
+    "modified": "2021-04-11",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 6,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "5",
+        "name": "Nginx",
+        "slug": "nginx",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "3",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "好久没发新文章啦。今天打算看看 Nginx 的 access.log 都有哪些小可爱，结果发现里面乱的有点难受。然后我就找到了这个好玩意： log format 根据官网文档介绍，使用 log format 可以自定义日志记录的格式。 官网文档戳这里 下面整理了一些常用的变量定义: | 变量 | 说明 | | | | | $remote addr | 客户端的远程地址 | | $remote us...",
+    "source": "data/content/posts/20.md",
+    "description": "好久没发新文章啦。今天打算看看 Nginx 的 access.log 都有哪些小可爱，结果发现里面乱的有点难受。然后我就找到了这个好玩意： log_format 根据官网文档介绍，使用 log_format 可以自定义日志记录的格式。 官网文档戳这里 下面整理了一些常用的变量定义: $remote_addr 客户端的远程地址 $remote_user 客户端的远程用户名 (大部分情况下好像抓不到这...",
+    "tags": [
+      "web",
+      "nginx"
+    ]
+  },
+  {
+    "cid": "19",
+    "slug": "19",
+    "url": "post.html?slug=19",
+    "title": "[HTML/CSS] 关于CSS各个元素之间的关系",
+    "date": "2020-10-18",
+    "modified": "2020-10-18",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "6",
+        "name": "HTML",
+        "slug": "html",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "4",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "我是一个前端小白，今天写CSS的时候突然意识到原来还有这类区别: 这三类是有区别的. 其实不难推出: 第一种情况下，只有在第一层div拥有.example元素，并且在他的子集div中含有任意的.subone元素，就会匹配。 第二种情况下，当一个div中同时含有.example和.subone元素时，就会匹配。 第三种情况下，当第一层div拥有.example元素，并且距离他的相邻子集div(第二层...",
+    "source": "data/content/posts/19.md",
+    "description": "我是一个前端小白，今天写CSS的时候突然意识到原来还有这类区别: 这三类是有区别的. 其实不难推出: - 第一种情况下，只有在第一层div拥有.example元素，并且在他的子集div中含有任意的.subone元素，就会匹配。 - 第二种情况下，当一个div中同时含有.example和.subone元素时，就会匹配。 - 第三种情况下，当第一层div拥有.example元素，并且距离他的相邻子集d...",
+    "tags": [
+      "html"
+    ]
+  },
+  {
+    "cid": "17",
+    "slug": "17",
+    "url": "post.html?slug=17",
+    "title": "[Linux-FileSystem] find指令常用写法",
+    "date": "2020-09-29",
+    "modified": "2022-06-16",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 7,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "7",
+        "name": "Linux",
+        "slug": "linux",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "5",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "今天又在瞎折腾，然后想到了这个很久没有使用过的指令。想着想着就觉得把它稍微介绍下。 按文件名查找 语法： path : 需要查找的路径。 expression : 查找的文件或文件夹名称。 例如： 按文件特征查找 以下段落转载自原文，整理为便于阅读的命令示例： 以上用法为常用写法，更多方法可以访问上方的转载链接。",
+    "source": "data/content/posts/17.md",
+    "description": "今天又在瞎折腾，然后想到了这个很久没有使用过的指令。想着想着就觉得把它稍微介绍下。 1. 按文件名查找 find path expression | path=需要查找的路径; expression=查找的文件-/夹名称 例如: find / -name 'owoblog ' # 该指令将会在根目录查找所有匹配开头是 owoblog 字样的文件-/夹 find . -name 'owoblog '...",
+    "tags": [
+      "web",
+      "linux"
+    ]
+  },
+  {
+    "cid": "15",
+    "slug": "15",
+    "url": "post.html?slug=15",
+    "title": "[PHP]有关于数组的蜜汁问题",
+    "date": "2020-08-20",
+    "modified": "2020-08-20",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 8,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "3",
+        "name": "PHP",
+        "slug": "php",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "1",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "最近因为需要比较两个数组内的元素，但恰好这两个数组内的元素都是未知的，也就导致了一个问题，无法使用array diff比较他们的差异，例如 Array(1) ([0] = string(1) \"k\") 和 Array(1) (\"aaa\" = int(0)) 没办法进行比较。所以我就想到了利用array search的方式自行写一个函数。然后蜜汁的问题来了， 现有以下代码，在调试后却会得到： 我整个...",
+    "source": "data/content/posts/15.md",
+    "description": "最近因为需要比较两个数组内的元素，但恰好这两个数组内的元素都是未知的，也就导致了一个问题，无法使用array_diff比较他们的差异，例如 Array(1) ([0] => string(1) \"k\") 和 Array(1) (\"aaa\" => int(0)) 没办法进行比较。所以我就想到了利用array_search的方式自行写一个函数。然后蜜汁的问题来了， 现有以下代码，在调试后却会得到： <...",
+    "tags": [
+      "web",
+      "php"
+    ]
+  },
+  {
+    "cid": "14",
+    "slug": "14",
+    "url": "post.html?slug=14",
+    "title": "[LOG][2020-08-02] 再次回归.",
+    "date": "2020-08-01",
+    "modified": "2020-08-20",
+    "commentsNum": "3",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 2,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "历经了1个月的服务器数据重组以及重新部署, 我成功的将原来的博客数据转移到了这台新的服务器上. 今日开始将重新稳定运行此博客.",
+    "source": "data/content/posts/14.md",
+    "description": "历经了1个月的服务器数据重组以及重新部署, 我成功的将原来的博客数据转移到了这台新的服务器上. 今日开始将重新稳定运行此博客.",
+    "tags": [
+      "default"
+    ]
+  },
+  {
+    "cid": "13",
+    "slug": "13",
+    "url": "post.html?slug=13",
+    "title": "[JS]之async/await",
+    "date": "2020-05-17",
+    "modified": "2020-05-17",
+    "commentsNum": "1",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 3,
+        "order": "1",
+        "parent": "0"
+      },
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 9,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "10",
+        "name": "JS",
+        "slug": "js",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "7",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "转载来自https://segmentfault.com/a/1190000007535316. 理解 JavaScript 的 async/await asyncjavascript 发布于 2016 11 19 约 16 分钟 随着 Node v7 的发布，越来越多的人开始研究据说是异步编程终级解决方案的 async/await。我第一次看到这组关键字并不是在 JavaScript 语言里，而...",
+    "source": "data/content/posts/13.md",
+    "description": "转载来自https://segmentfault.com/a/1190000007535316. 理解 JavaScript 的 async/await asyncjavascript 发布于 2016-11-19 约 16 分钟 随着 Node v7 的发布，越来越多的人开始研究据说是异步编程终级解决方案的 async/await。我第一次看到这组关键字并不是在 JavaScript 语言里，而...",
+    "tags": [
+      "default",
+      "web",
+      "js"
+    ]
+  },
+  {
+    "cid": "12",
+    "slug": "12",
+    "url": "post.html?slug=12",
+    "title": "[COVID-19] RIP. 2020-04-04",
+    "date": "2020-04-04",
+    "modified": "2020-04-21",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "5",
+        "name": "Nginx",
+        "slug": "nginx",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "3",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "愿逝者安息。",
+    "source": "data/content/posts/12.md",
+    "description": "愿逝者安息。",
+    "tags": [
+      "nginx"
+    ]
+  },
+  {
+    "cid": "11",
+    "slug": "11",
+    "url": "post.html?slug=11",
+    "title": "[AirPlane]FMC提示DRAG REQUIRED",
+    "date": "2020-02-11",
+    "modified": "2020-04-21",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 4,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "DRAG REQUIRED 为需要阻力。 垂直导航生效和需要添加阻力，打开减速板一类的可以增大飞机阻力的外设，或者自动油门断开并减少推力，以保持该垂直导航下降飞行航迹",
+    "source": "data/content/posts/11.md",
+    "description": "DRAG REQUIRED 为需要阻力。 垂直导航生效和需要添加阻力，打开减速板一类的可以增大飞机阻力的外设，或者自动油门断开并减少推力，以保持该垂直导航下降飞行航迹",
+    "tags": [
+      "default"
+    ]
+  },
+  {
+    "cid": "10",
+    "slug": "10",
+    "url": "post.html?slug=10",
+    "title": "[Web]HTTP请求出现 \"405 Not Allowed\" 的一种解决办法",
+    "date": "2020-02-11",
+    "modified": "2020-02-11",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "5",
+        "name": "Nginx",
+        "slug": "nginx",
+        "type": "category",
+        "description": null,
+        "count": 2,
+        "order": "3",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "今天莫名其妙的发现静态HTML文件发送POST请求后Nginx返回了错误代码405，百度一看才发现原来静态HTML不允许POST请求。 所以需要向下面这样修改： 下文转载自 \"https://www.w3h5.com/post/419.html\". 修改 Nginx 的配置文件：nginx.conf 在你的nginx的虚拟主机配置文件中添加以下内容：\"error page 405 =200 $ur...",
+    "source": "data/content/posts/10.md",
+    "description": "今天莫名其妙的发现静态HTML文件发送POST请求后Nginx返回了错误代码405，百度一看才发现原来静态HTML不允许POST请求。 所以需要向下面这样修改： -- 下文转载自 \"https://www.w3h5.com/post/419.html\". 修改 Nginx 的配置文件：nginx.conf 在你的nginx的虚拟主机配置文件中添加以下内容：\" error_page 405 =200...",
+    "tags": [
+      "nginx"
+    ]
+  },
+  {
+    "cid": "9",
+    "slug": "9",
+    "url": "post.html?slug=9",
+    "title": "[加油武汉!]我想对新型冠状病毒说",
+    "date": "2020-02-08",
+    "modified": "2020-02-08",
+    "commentsNum": "1",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 5,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "眼看着2月份都只剩下20天了，现在的感染人数还是有增不减。经历过2003年的那场瘟疫知道了SARS的可怕，2020年又重演。历史总是像俄罗斯转轮一样，喜欢戏弄着人类的生命。所以，一切厄运快快走开啦！",
+    "source": "data/content/posts/9.md",
+    "description": "眼看着2月份都只剩下20天了，现在的感染人数还是有增不减。经历过2003年的那场瘟疫知道了SARS的可怕，2020年又重演。历史总是像俄罗斯转轮一样，喜欢戏弄着人类的生命。所以，一切厄运快快走开啦！",
+    "tags": [
+      "default"
+    ]
+  },
+  {
+    "cid": "8",
+    "slug": "8",
+    "url": "post.html?slug=8",
+    "title": "[AirPlane] A.S.M. 的意思",
+    "date": "2019-12-16",
+    "modified": "2020-09-07",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 6,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "A.S.M. 为\"辅助平衡自动校准仪\". [其他含义] ASM为Assembly的简写，ASM指令的含义为汇编指令（泛指Intel 80X86 CPU中的指令集）。 ASM指令是为编程人员编写程序准备的，编译器将会把ASM指令真正的翻译成机器代码（能控制CPU做出操作的代码）。 ASM至今运用广泛，2015年所有的个人电脑，大型服务器绝大多数使用ASM指令集。 ASM的优点在于指令广泛和丰富，处理...",
+    "source": "data/content/posts/8.md",
+    "description": "A.S.M. 为\"辅助平衡自动校准仪\". [其他含义] ASM为Assembly的简写，ASM指令的含义为汇编指令（泛指Intel 80X86 CPU中的指令集）。 ASM指令是为编程人员编写程序准备的，编译器将会把ASM指令真正的翻译成机器代码（能控制CPU做出操作的代码）。 ASM至今运用广泛，2015年所有的个人电脑，大型服务器绝大多数使用ASM指令集。 ASM的优点在于指令广泛和丰富，处理...",
+    "tags": [
+      "default"
+    ]
+  },
+  {
+    "cid": "7",
+    "slug": "7",
+    "url": "post.html?slug=7",
+    "title": "[AirPlane]飞机的各种速度 (缩写和英文全称)",
+    "date": "2019-12-16",
+    "modified": "2019-12-16",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 7,
+        "order": "1",
+        "parent": "0"
+      },
+      {
+        "mid": "9",
+        "name": "文章转载",
+        "slug": "reprinted",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "1",
+        "parent": "1"
+      }
+    ],
+    "excerpt": "原帖地址: http://blog.sina.com.cn/s/blog 8d31c0700102wm4n.html V SPEEDS DEFINED This information is based on data provided by Kenny Stone (DC3 603), George Leach (DC3 754), a search of the Internet and FS...",
+    "source": "data/content/posts/7.md",
+    "description": "原帖地址: http://blog.sina.com.cn/s/blog_8d31c0700102wm4n.html V - SPEEDS DEFINED This information is based on data provided by Kenny Stone (DC3-603), George Leach (DC3-754), a search of the Internet and ...",
+    "tags": [
+      "default",
+      "reprinted"
+    ]
+  },
+  {
+    "cid": "6",
+    "slug": "6",
+    "url": "post.html?slug=6",
+    "title": "[OwOBlog#Log20191209]主题测试",
+    "date": "2019-12-09",
+    "modified": "2019-12-09",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 8,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "嗯。。理所当然，这是一篇有关于本站点前台的主题日志。 目前还是有许多不足之处，在此我会发布有关这个主题的更新信息。 [2019 12 07] Ver. 201912070001 创建项目 开始绘制大概视图结构草图 根据试图结构草图构建CSS文件 应用前台 [2019 12 08] Ver. 201912070002 优化CSS代码 优化调试 加入BootStrap框架 使用响应式布局 [2019 ...",
+    "source": "data/content/posts/6.md",
+    "description": "嗯。。理所当然，这是一篇有关于本站点前台的主题日志。 目前还是有许多不足之处，在此我会发布有关这个主题的更新信息。 [2019-12-07] Ver. 201912070001 创建项目 开始绘制大概视图结构草图 根据试图结构草图构建CSS文件 应用前台 [2019-12-08] Ver. 201912070002 优化CSS代码 优化调试 加入BootStrap框架 使用响应式布局 [2019-...",
+    "tags": [
+      "default"
+    ]
+  },
+  {
+    "cid": "5",
+    "slug": "5",
+    "url": "post.html?slug=5",
+    "title": "[Windows]如何删除\"远程桌面连接\"的历史记录?",
+    "date": "2019-12-09",
+    "modified": "2019-12-09",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 10,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "8",
+        "name": "Windows",
+        "slug": "win",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "6",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "按住 \"Windows+R\" 键, 输入 regedit\" 然后 \"Ctrl+Shift+Enter\" 键以管理员模式运行。 根据以下路径进入注册表: 找到你需要删除的记录删除即可。",
+    "source": "data/content/posts/5.md",
+    "description": "按住 \"Windows+R\" 键, 输入 regedit\" 然后 \"Ctrl+Shift+Enter\" 键以管理员模式运行。 根据以下路径进入注册表: HKEY_CURRENT_USER -> Software -> Microsoft -> Terminal Server Client -> Default 找到你需要删除的记录删除即可。",
+    "tags": [
+      "web",
+      "win"
+    ]
+  },
+  {
+    "cid": "4",
+    "slug": "4",
+    "url": "post.html?slug=4",
+    "title": "[Office]ospp.vbs文件的作用",
+    "date": "2019-12-07",
+    "modified": "2019-12-09",
+    "commentsNum": "1",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 9,
+        "order": "1",
+        "parent": "0"
+      },
+      {
+        "mid": "9",
+        "name": "文章转载",
+        "slug": "reprinted",
+        "type": "category",
+        "description": null,
+        "count": 1,
+        "order": "1",
+        "parent": "1"
+      }
+    ],
+    "excerpt": "文章源地址: https://www.cnblogs.com/mahocon/p/8615210.html ospp.vbs是什么文件？激活过程cscript ospp.vbs命令详解 在Office 2013激活过程中我们经常会用到cscript ospp.vbs这个命令。那么，很有必要来了解一下，ospp.vbs到底是什么文件？Cscript.exe是脚本运行引擎，这里就不多介绍了。ospp全...",
+    "source": "data/content/posts/4.md",
+    "description": "文章源地址: https://www.cnblogs.com/mahocon/p/8615210.html ospp.vbs是什么文件？激活过程cscript ospp.vbs命令详解 在Office 2013激活过程中我们经常会用到cscript ospp.vbs这个命令。那么，很有必要来了解一下，ospp.vbs到底是什么文件？Cscript.exe是脚本运行引擎，这里就不多介绍了。ospp全...",
+    "tags": [
+      "default",
+      "reprinted"
+    ]
+  },
+  {
+    "cid": "3",
+    "slug": "3",
+    "url": "post.html?slug=3",
+    "title": "[Windows]设备管理器的基础管理",
+    "date": "2019-12-06",
+    "modified": "2019-12-06",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 11,
+        "order": "2",
+        "parent": "0"
+      },
+      {
+        "mid": "8",
+        "name": "Windows",
+        "slug": "win",
+        "type": "category",
+        "description": null,
+        "count": 2,
+        "order": "6",
+        "parent": "2"
+      }
+    ],
+    "excerpt": "最近新组了台家用主机顺便兼当服务器用，然后配了个无线网卡。但由于原先的无线网卡采用 WIFI 6 标准，与我当前的路由器兼容性较差，三思后我便新买了张 WIFI 5 的卡。今天给新卡装驱动时，发现无法更改 WLAN 和 Bluetooth 的名称，后来发现是旧卡的驱动没有卸载。正常情况下，无法直接进入控制面板的卸载程序卸载驱动。若需要卸载掉设备的驱动，我采用了如下方法： 按住 \"Windows+R...",
+    "source": "data/content/posts/3.md",
+    "description": "最近新组了台家用主机顺便兼当服务器用，然后配了个无线网卡。但由于原先的无线网卡采用 WIFI 6 标准，与我当前的路由器兼容性较差，三思后我便新买了张 WIFI 5 的卡。今天给新卡装驱动时，发现无法更改 WLAN 和 Bluetooth 的名称，后来发现是旧卡的驱动没有卸载。正常情况下，无法直接进入控制面板的卸载程序卸载驱动。若需要卸载掉设备的驱动，我采用了如下方法： 按住 \"Windows+R...",
+    "tags": [
+      "web",
+      "win"
+    ]
+  },
+  {
+    "cid": "1",
+    "slug": "start",
+    "url": "post.html?slug=start",
+    "title": "Hello, World.",
+    "date": "2019-11-29",
+    "modified": "2019-11-29",
+    "commentsNum": "1",
+    "categories": [
+      {
+        "mid": "1",
+        "name": "默认分类",
+        "slug": "default",
+        "type": "category",
+        "description": "只是一个默认分类",
+        "count": 10,
+        "order": "1",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "经过了3个小时的努力，我终于把这台服务器配置好了。然后，“非常顺利”的搭建了Typecho。很高兴你能访问我的Space，我会不定时发布自己的动态的。",
+    "source": "data/content/posts/start.md",
+    "description": "经过了3个小时的努力，我终于把这台服务器配置好了。然后，“非常顺利”的搭建了Typecho。很高兴你能访问我的Space，我会不定时发布自己的动态的。",
+    "tags": [
+      "default"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理面板 | OwO Blog</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+  </head>
+  <body>
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Manage</p>
+        <h1>管理面板</h1>
+      </div>
+      <div class="header-actions">
+        <a class="button ghost" href="/">工具首页</a>
+        <a class="button ghost" href="/publish/">写新文章</a>
+        <a class="button ghost" href="/site/index.html" target="_blank">预览站点</a>
+        <button class="button" id="refreshBtn" type="button">刷新</button>
+      </div>
+    </header>
+
+    <main class="admin-layout manage-layout">
+      <section class="panel">
+        <div class="panel-title">
+          <h2>文章</h2>
+          <a class="small-button" href="/publish/">新增</a>
+        </div>
+        <input class="search" id="postSearch" type="search" placeholder="搜索文章...">
+        <div class="post-list" id="postList"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <h2>分类标签</h2>
+          <button class="small-button" id="newCategoryBtn" type="button">新增</button>
+        </div>
+        <div class="category-list" id="categoryList"></div>
+      </section>
+    </main>
+
+    <dialog id="categoryDialog">
+      <form method="dialog" class="dialog-form">
+        <h2 id="categoryDialogTitle">分类标签</h2>
+        <label>名称<input id="categoryName" required></label>
+        <label>Slug<input id="categorySlug" required></label>
+        <label>描述<input id="categoryDescription"></label>
+        <div class="dialog-actions">
+          <button class="button ghost" value="cancel">取消</button>
+          <button class="button" id="saveCategoryBtn" value="default">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" hidden></div>
+    <script src="../assets/js/manage.js"></script>
+  </body>
+</html>

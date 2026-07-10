@@ -1,0 +1,7 @@
+# Typecho database backups contain private fields; do not publish them.
+*.dat
+*_owoblog.com_*.dat
+
+# Generated deployment folder
+_site/
+

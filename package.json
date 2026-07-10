@@ -1,0 +1,11 @@
+{
+  "name": "owoblog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-site.js",
+    "admin": "node local-admin/server.js",
+    "serve": "node local-admin/server.js",
+    "normalize": "node scripts/normalize-markdown.js"
+  }
+}

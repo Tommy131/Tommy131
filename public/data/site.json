@@ -1,0 +1,933 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-10T22:57:21.790Z",
+  "site": {
+    "title": "OwO Blog",
+    "owner": "Tommy131 / HanskiJay",
+    "domain": "https://owoblog.com",
+    "description": "Tommy131 / HanskiJay 的个人博客，记录全栈开发、系统工具、安全实践与生活碎片。",
+    "hero": {
+      "eyebrow": "Full-stack developer · Tool builder · Digital garden",
+      "title": "用代码锻造工具，用工具创造世界。",
+      "lead": "这里收录了 23 篇文章，并继续记录 Go、PHP、JavaScript、系统工具、网络服务与安全实践。"
+    },
+    "projects": [
+      {
+        "id": "01",
+        "title": "OwO-Tool-Box",
+        "description": "个人万能工具箱，集成网络性能测试、系统优化脚本与开发辅助工具。",
+        "url": "https://github.com/Tommy131/OwO-Tool-Box"
+      },
+      {
+        "id": "02",
+        "title": "KuaishouParser",
+        "description": "短视频解析工具，注重稳定 API、清晰边界和可维护的服务结构。",
+        "url": "https://github.com/Tommy131/KuaishouParser"
+      },
+      {
+        "id": "03",
+        "title": "OpenSSL-Windows-Issuer",
+        "description": "用于自签发 Windows RDP 加密证书的脚本库，简化证书生成流程。",
+        "url": "https://github.com/Tommy131/OpenSSL-Windows-Issuer"
+      },
+      {
+        "id": "04",
+        "title": "OwO-WinDeployer",
+        "description": "基于 WinPE 的离线 Windows 部署方案，关注批量部署和无人值守体验。",
+        "url": "https://github.com/Tommy131/OwO-WinDeployer"
+      },
+      {
+        "id": "05",
+        "title": "OwO-FlightAssistant",
+        "description": "跨平台命令行工具与 AI 助手，面向自动化任务、通知和批量操作。",
+        "url": "https://github.com/Tommy131/OwO-FlightAssistant"
+      }
+    ],
+    "about": {
+      "eyebrow": "About",
+      "title": "你好，我是 Tommy131 / HanskiJay。",
+      "body": [
+        "这里是我的个人数字花园，用来沉淀工具开发、系统维护、网络服务、安全实践和生活观察。",
+        "这个博客现在使用 GitHub Pages 静态托管，文章内容由 JSON 数据驱动，页面只在浏览器中按需渲染。"
+      ]
+    }
+  },
+  "categories": [
+    {
+      "mid": "2",
+      "name": "技术杂谈",
+      "slug": "web",
+      "type": "category",
+      "description": null,
+      "count": 12,
+      "order": "2",
+      "parent": "0"
+    },
+    {
+      "mid": "1",
+      "name": "默认分类",
+      "slug": "default",
+      "type": "category",
+      "description": "只是一个默认分类",
+      "count": 11,
+      "order": "1",
+      "parent": "0"
+    },
+    {
+      "mid": "9",
+      "name": "文章转载",
+      "slug": "reprinted",
+      "type": "category",
+      "description": null,
+      "count": 2,
+      "order": "1",
+      "parent": "1"
+    },
+    {
+      "mid": "11",
+      "name": "CMD/BAT",
+      "slug": "cmd-bat",
+      "type": "category",
+      "description": "适用于Windows NT系统的可执行脚本",
+      "count": 1,
+      "order": "8",
+      "parent": "2"
+    },
+    {
+      "mid": "6",
+      "name": "HTML",
+      "slug": "html",
+      "type": "category",
+      "description": null,
+      "count": 1,
+      "order": "4",
+      "parent": "2"
+    },
+    {
+      "mid": "10",
+      "name": "JS",
+      "slug": "js",
+      "type": "category",
+      "description": null,
+      "count": 2,
+      "order": "7",
+      "parent": "2"
+    },
+    {
+      "mid": "7",
+      "name": "Linux",
+      "slug": "linux",
+      "type": "category",
+      "description": null,
+      "count": 2,
+      "order": "5",
+      "parent": "2"
+    },
+    {
+      "mid": "5",
+      "name": "Nginx",
+      "slug": "nginx",
+      "type": "category",
+      "description": null,
+      "count": 3,
+      "order": "3",
+      "parent": "2"
+    },
+    {
+      "mid": "3",
+      "name": "PHP",
+      "slug": "php",
+      "type": "category",
+      "description": null,
+      "count": 2,
+      "order": "1",
+      "parent": "2"
+    },
+    {
+      "mid": "8",
+      "name": "Windows",
+      "slug": "win",
+      "type": "category",
+      "description": null,
+      "count": 3,
+      "order": "6",
+      "parent": "2"
+    }
+  ],
+  "posts": [
+    {
+      "cid": "35",
+      "title": "[指令] 遍历当前文件夹查找指定的字符串内容",
+      "slug": "35",
+      "date": "2022-07-03",
+      "modified": "2026-07-10",
+      "description": "众所周知，在Linux系统中遍历查找文件可以使用 find 指令。我们这里来一点高级的干货 (bushi): find ./ -type f -print0 -exec | xargs -0 grep \"hello world\" 上述指令将会在当前文件夹中遍历查找所有文件，并找出哪一个文件中包含 hello world 字样。 ###参数讲解 ./ 当前文件夹路径 -type f 指定的格式， f...",
+      "excerpt": "众所周知，在Linux系统中遍历查找文件可以使用 find 指令。我们这里来一点高级的干货 (bushi): 上述指令将会在当前文件夹中遍历查找所有文件，并找出哪一个文件中包含 hello world 字样。 参数讲解 | 参数 | 说明 | | | | | ./ | 当前文件夹路径 | | type f | 指定查找格式， f 表示 file，仅查找文件 | | print0 | 将文件名分隔符...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "7",
+          "name": "Linux",
+          "slug": "linux",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "5",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "linux"
+      ],
+      "body": "众所周知，在Linux系统中遍历查找文件可以使用 `find` 指令。我们这里来一点高级的干货 (bushi):\n\n```bash\nfind ./ -type f -print0 -exec | xargs -0 grep \"hello world\"\n```\n\n上述指令将会在当前文件夹中遍历查找所有文件，并找出哪一个文件中包含 `hello world` 字样。\n\n### 参数讲解\n\n| 参数 | 说明 |\n| --- | --- |\n| `./` | 当前文件夹路径 |\n| `-type f` | 指定查找格式，`f` 表示 file，仅查找文件 |\n| `-print0` | 将文件名分隔符转换为 NULL 字符，避免空格导致分割错误 |\n| `-exec` | 后面跟需要执行的命令 |\n| `\\|` | UNIX 管道操作 |\n| `xargs` | 将输入分割并转换为命令参数 |\n| `-0` | 配合 `-print0` 使用，按 NULL 字符分割 |\n| `grep \"(String)\"` | 查找指定字符串 |\n\n以上。\n",
+      "url": "post.html?slug=35"
+    },
+    {
+      "cid": "29",
+      "title": "[注册表] 如何在鼠标右键菜单栏中创建一个选项",
+      "slug": "29",
+      "date": "2022-06-17",
+      "modified": "2023-03-05",
+      "description": "近日由于频繁需要在开发项目中使用 CMD , 所以每次都需要 Win + R 键呼出 CMD ，非常的麻烦。 于是乎搜索了一番，发现可以使用注册表解决这个问题，我们一起来看具体步骤: 使用 Win + R 键呼出运行, 然后输入 regedit 打开注册表。 找到 HKEY_CLASSES_ROOT 栏, 然后找到你想添加的位置。例如文件夹目录下, 则为 Directory 。 找到项 shell...",
+      "excerpt": "近日由于频繁需要在开发项目中使用 CMD , 所以每次都需要 Win + R 键呼出 CMD ，非常的麻烦。 于是乎搜索了一番，发现可以使用注册表解决这个问题，我们一起来看具体步骤: 使用 Win + R 键呼出运行, 然后输入 regedit 打开注册表。 找到 HKEY CLASSES ROOT 栏, 然后找到你想添加的位置。例如文件夹目录下, 则为 Directory 。 找到项 shell...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 0,
+          "order": "1",
+          "parent": "0"
+        },
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "8",
+          "name": "Windows",
+          "slug": "win",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "6",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "default",
+        "web",
+        "win"
+      ],
+      "body": "近日由于频繁需要在开发项目中使用 `CMD`, 所以每次都需要 `Win + R` 键呼出 `CMD`，非常的麻烦。 于是乎搜索了一番，发现可以使用注册表解决这个问题，我们一起来看具体步骤:\n\n- 使用 Win + R 键呼出运行, 然后输入 regedit 打开注册表。\n\n- 找到 HKEY CLASSES ROOT 栏, 然后找到你想添加的位置。例如文件夹目录下, 则为 Directory 。\n\n- 找到项 shelll 并右键, 然后点击 新建 (N) 项 (K) , 输入自定义的名称。\n\n- 可以在右侧的 (默认) 里输入右键时需要显示的提示, 这里例如 在此处打开CMD命令提示符 。\n\n- 若需要特定的图标显示, 可以在当前项创建 字符串值 并命名为 Icon , 然后输入Icon的资源地址 (这里例如 C:\\Windows\\System32\\cmd.exe )。\n\n- 在当前项中 创建子项 , 并命名为 command 。\n\n- 在 command 中的 (默认) 位置输入单击此选项时需要执行的命令, 这里为 cmd.exe 。\n\n- 打开一个文件夹, 对准TA点右键试一下吧\n\nPS: 若需要在空白处显示, 对应的项不是 Directory, 而是其目录下的 `Background`。\n\n### 各项菜单的注册表路径\n\n桌面空白处：计算机\\HKEY_CLASSES_ROOT\\DesktopBackground\\Shell 文件：计算机\\HKEY_CLASSES_ROOT\\*\\shell 文件夹：计算机\\HKEY_CLASSES_ROOT\\Directory\\shell 文件和文件夹：计算机\\HKEY_CLASSES_ROOT\\AllFilesystemObjects\\shell 文件夹空白处：计算机\\HKEY_CLASSES_ROOT\\Directory\\Background\\shell\n\n---\n\n本文参考 这里 学习到的, 欢迎阅读原文。\n",
+      "url": "post.html?slug=29"
+    },
+    {
+      "cid": "27",
+      "title": "[BAT] 关于指令 `set` 的问题",
+      "slug": "27",
+      "date": "2022-06-16",
+      "modified": "2022-06-16",
+      "description": "最近刚开始学习Vue，由于没有使用vue-cli脚手架，并且本地的编译环境并非Nginx设定的web目录，所以尝试使用 npm run build 之后每次都需要手动将编译好的 dist 目录移动到Nginx设定的web目录下，非常的麻烦。(也许有更方便的办法，但耐于我是初学者一时半会不知道如何正确配置，所以使用了如下的脚本) 然后我便有了之前的以下代码： @echo off chcp 65001...",
+      "excerpt": "最近刚开始学习Vue，由于没有使用vue cli脚手架，并且本地的编译环境并非Nginx设定的web目录，所以尝试使用 npm run build 之后每次都需要手动将编译好的 dist 目录移动到Nginx设定的web目录下，非常的麻烦。(也许有更方便的办法，但耐于我是初学者一时半会不知道如何正确配置，所以使用了如下的脚本) 然后我便有了之前的以下代码： 结果后来经过非常之久的脚本执行，发现 s...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 1,
+          "order": "1",
+          "parent": "0"
+        },
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 2,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "11",
+          "name": "CMD/BAT",
+          "slug": "cmd-bat",
+          "type": "category",
+          "description": "适用于Windows NT系统的可执行脚本",
+          "count": 0,
+          "order": "8",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "default",
+        "web",
+        "cmd-bat"
+      ],
+      "body": "最近刚开始学习Vue，由于没有使用vue-cli脚手架，并且本地的编译环境并非Nginx设定的web目录，所以尝试使用 `npm run build` 之后每次都需要手动将编译好的 `dist` 目录移动到Nginx设定的web目录下，非常的麻烦。(也许有更方便的办法，但耐于我是初学者一时半会不知道如何正确配置，所以使用了如下的脚本)\n\n然后我便有了之前的以下代码：\n\n```batch\n@echo off\nchcp 65001\nset ORIGINAL_PATH=%cd%\ncd ../..\nset VUE_BUILT_PATH=%cd%\nset TARGET_DEL_DIR=vuetest\nset CURRENT_PATH=%VUE_BUILT_PATH%\\%TARGET_DEL_DIR%\nset input=N\n\nif exist %CURRENT_PATH% (\n\tset /p input=\"本文件夹下的所有文件将被删除！此操作不可逆！[Y/N]  \"\n\n\tif %input% == Y (\n\t\techo 路径: %CURRENT_PATH%  [已确认删除!]\n\t\trd/s/q %CURRENT_PATH%\n\t) else (\n\t\techo 已取消.\n\t)\n)\n\ncd %ORIGINAL_PATH%\npause\n```\n\n结果后来经过非常之久的脚本执行，发现 `set` 的值 `input` 始终无法将参数传递到 `if` 语句里面，百度了半天也不知道是什么原因。\n\n后来我突然意识到，会不会跟JavaScript一样变量都有作用域？然后我又尝试将 `set input=N` 移动到了 `if` 语句里面，结果还是不行。后来我干脆直接删除了 `if` 语句的判断，发现可以了。\n\n直到那时候我才意识到可能是CMD的 `\"BUG\"` 或者 `\"特性\"` 导致的吧。\n\n于是改进了代码之后有了如下的最终脚本:\n\n```batch\n@echo off\nchcp 65001\nTITLE 编译文件移动脚本\nset ORIGINAL_PATH=%cd%\ncd ../..\nset VUE_BUILT_PATH=%cd%\nset TARGET_DEL_DIR=vuetest\nset CURRENT_PATH=%VUE_BUILT_PATH%\\%TARGET_DEL_DIR%\nset input=N\n\nif not exist %CURRENT_PATH% (\n\techo 正在移动编译文件夹...\n\tmove %ORIGINAL_PATH%\\dist %CURRENT_PATH%\n\tpause\n\texit\n)\n\nset /p input=\"本文件夹下的所有文件将被删除！此操作不可逆！[Y/N]  \"\n\nif %input% == Y (\n\techo 路径: %CURRENT_PATH%  [已确认删除!]\n\trd/s/q %CURRENT_PATH%\n) else (\n\techo 已取消.\n)\n\ncd %ORIGINAL_PATH%\npause\n```\n\n真的不知道是什么奇葩的问题导致的，好在最后解决了:)\n",
+      "url": "post.html?slug=27"
+    },
+    {
+      "cid": "26",
+      "title": "[转载] 线程安全和非线程安全",
+      "slug": "26",
+      "date": "2022-03-11",
+      "modified": "2022-03-11",
+      "description": "二者如何取舍 非线程安全是指多线程操作同一个对象可能会出现问题。而线程安全则是多线程操作同一个对象不会有问题。 线程安全必须要使用很多synchronized关键字来同步控制，所以必然会导致性能的降低。 所以在使用的时候，如果是多个线程操作同一个对象，那么使用线程安全的Vector；否则，就使用效率更高的ArrayList。 非线程安全!=不安全 有人在使用过程中有一个不正确的观点：我的程序是多线...",
+      "excerpt": "二者如何取舍 非线程安全是指多线程操作同一个对象可能会出现问题。而线程安全则是多线程操作同一个对象不会有问题。 线程安全必须要使用很多synchronized关键字来同步控制，所以必然会导致性能的降低。 所以在使用的时候，如果是多个线程操作同一个对象，那么使用线程安全的Vector；否则，就使用效率更高的ArrayList。 非线程安全!=不安全 有人在使用过程中有一个不正确的观点：我的程序是多线...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 3,
+          "order": "2",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "web"
+      ],
+      "body": "二者如何取舍 非线程安全是指多线程操作同一个对象可能会出现问题。而线程安全则是多线程操作同一个对象不会有问题。 线程安全必须要使用很多synchronized关键字来同步控制，所以必然会导致性能的降低。 所以在使用的时候，如果是多个线程操作同一个对象，那么使用线程安全的Vector；否则，就使用效率更高的ArrayList。\n\n非线程安全!=不安全 有人在使用过程中有一个不正确的观点：我的程序是多线程的，不能使用ArrayList要使用Vector，这样才安全。 非线程安全并不是多线程环境下就不能使用。注意我上面有说到：多线程操作同一个对象。注意是同一个对象。比如最上面那个模拟，就是在主线程中new的一个ArrayList然后多个线程操作同一个ArrayList对象。 如果是每个线程中new一个ArrayList，而这个ArrayList只在这一个线程中使用，那么肯定是没问题的。\n\n线程安全的实现 线程安全是通过线程同步控制来实现的，也就是synchronized关键字。\n\n-------------------------------------------------------------- 原文地址链接：https://www.jianshu.com/p/d46f06dd884d\n",
+      "url": "post.html?slug=26"
+    },
+    {
+      "cid": "24",
+      "title": "[ES6 Fetch POST] 在操作Fetch中遇到的问题总结",
+      "slug": "24",
+      "date": "2021-04-13",
+      "modified": "2021-04-13",
+      "description": "众所周知, 在现在前后端分离的大趋势下, 数据交互也变得复杂了起来。今天在写项目的时候用到了一个前端组件, 而且这个组件的数据传递方式就是传统的fetch。 问题所在: 前端的fetch请求写法正确, 但是PHP后端死活接收不到参数。在这耽搁了大概十多分钟后我受不了了，百度了半天才发现一个有用的方法，我这里转载进来，记录一下这个坑。 原文地址： 点我访问 ------ 前端Fetch写法: let...",
+      "excerpt": "众所周知, 在现在前后端分离的大趋势下, 数据交互也变得复杂了起来。今天在写项目的时候用到了一个前端组件, 而且这个组件的数据传递方式就是传统的fetch。 问题所在: 前端的fetch请求写法正确, 但是PHP后端死活接收不到参数。在这耽搁了大概十多分钟后我受不了了，百度了半天才发现一个有用的方法，我这里转载进来，记录一下这个坑。 原文地址：点我访问 前端Fetch写法: 后端PHP写法: 以上...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 4,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "10",
+          "name": "JS",
+          "slug": "js",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "7",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "js"
+      ],
+      "body": "众所周知, 在现在前后端分离的大趋势下, 数据交互也变得复杂了起来。今天在写项目的时候用到了一个前端组件, 而且这个组件的数据传递方式就是传统的fetch。\n\n问题所在: 前端的fetch请求写法正确, 但是PHP后端死活接收不到参数。在这耽搁了大概十多分钟后我受不了了，百度了半天才发现一个有用的方法，我这里转载进来，记录一下这个坑。 原文地址：点我访问\n\n---\n\n前端Fetch写法:\n\n```javascript\nlet data = {\n    method: 'POST',\n    headers: {\n        'Content-Type': 'application/x-www-form-urlencoded'\n    },\n    body : 'id=value'\n};\n```\n\n后端PHP写法:\n\n```php\n$body = file_get_contents('php://input');\nparse_str($body, $params);\n$id = $params['id'] ?? null;\n```\n\n以上为总结, 防止下次踩坑!\n",
+      "url": "post.html?slug=24"
+    },
+    {
+      "cid": "21",
+      "title": "[PHP_SESSION] SESSION自动失效的问题",
+      "slug": "21",
+      "date": "2021-04-11",
+      "modified": "2021-11-05",
+      "description": "最近写项目的时候会发现一个很奇怪的问题, 明明启动了Session，并且PHP设置的 Cookie_sessionid 也没有到期, 但是过了一定的时间, 之前设置的Session数据却不翼而飞, 造成错误。于是我搜索了一番发现, 只需要修改 php.ini 中的一个关键设置即可。下面是我在项目中实施的热修复: <?php // Your codes; if(session_status() !=...",
+      "excerpt": "最近写项目的时候会发现一个很奇怪的问题, 明明启动了Session，并且PHP设置的 Cookie sessionid 也没有到期, 但是过了一定的时间, 之前设置的Session数据却不翼而飞, 造成错误。于是我搜索了一番发现, 只需要修改 php.ini 中的一个关键设置即可。下面是我在项目中实施的热修复: 上面的 session.gc maxlifetime 就是修改Session的 最大生...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 5,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "3",
+          "name": "PHP",
+          "slug": "php",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "1",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "php"
+      ],
+      "body": "最近写项目的时候会发现一个很奇怪的问题, 明明启动了Session，并且PHP设置的 `Cookie_sessionid` 也没有到期, 但是过了一定的时间, 之前设置的Session数据却不翼而飞, 造成错误。于是我搜索了一番发现, 只需要修改 `php.ini` 中的一个关键设置即可。下面是我在项目中实施的热修复:\n\n```php\nini_set('session.gc_maxlifetime', 3600 * 24);\nsession_start();\n```\n\n上面的 `session.gc_maxlifetime` 就是修改Session的 `最大生命时间`, 到期后将会被PHP的GC机制自动回收。 PHP的配置文件默认设置的过期时间为 `1440` 秒, 也就是 `24分钟`。 注意: 修改Session配置文件的时候必须要 `在Session启动前` 修改, 否则会造成错误异常抛出!\n",
+      "url": "post.html?slug=21"
+    },
+    {
+      "cid": "20",
+      "title": "[NGINX] Web环境下的日志记录格式(log_format)",
+      "slug": "20",
+      "date": "2021-04-11",
+      "modified": "2021-04-11",
+      "description": "好久没发新文章啦。今天打算看看 Nginx 的 access.log 都有哪些小可爱，结果发现里面乱的有点难受。然后我就找到了这个好玩意： log_format 根据官网文档介绍，使用 log_format 可以自定义日志记录的格式。 官网文档戳这里 下面整理了一些常用的变量定义: $remote_addr 客户端的远程地址 $remote_user 客户端的远程用户名 (大部分情况下好像抓不到这...",
+      "excerpt": "好久没发新文章啦。今天打算看看 Nginx 的 access.log 都有哪些小可爱，结果发现里面乱的有点难受。然后我就找到了这个好玩意： log format 根据官网文档介绍，使用 log format 可以自定义日志记录的格式。 官网文档戳这里 下面整理了一些常用的变量定义: | 变量 | 说明 | | | | | $remote addr | 客户端的远程地址 | | $remote us...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 6,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "5",
+          "name": "Nginx",
+          "slug": "nginx",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "3",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "nginx"
+      ],
+      "body": "好久没发新文章啦。今天打算看看 `Nginx` 的 `access.log` 都有哪些小可爱，结果发现里面乱的有点难受。然后我就找到了这个好玩意：`log_format`\n\n根据官网文档介绍，使用 `log_format` 可以自定义日志记录的格式。 官网文档戳这里 下面整理了一些常用的变量定义:\n\n| 变量 | 说明 |\n| --- | --- |\n| `$remote_addr` | 客户端的远程地址 |\n| `$remote_user` | 客户端的远程用户名（大部分情况下好像抓不到这个值） |\n| `$time_local` | 访问的时间与时区 |\n| `$request` | HTTP请求头部 |\n| `$status` | HTTP状态码，例如：200/301/404 |\n| `$body_bytes_sent` | 服务器发送给客户端的响应body字节数 |\n| `$http_referer` | HTTP访问来源（如果是直接访问网站的话这个值为空，如果是从A站到B站的话，这个值为A站的URL） |\n| `$http_user_agent` | 客户端的UA（用户浏览器信息） |\n| `$http_x_forwarded_for` | 客户端的代理地址（如果代理服务器开启了禁止原始IP记录的话，这里将没有值） |\n",
+      "url": "post.html?slug=20"
+    },
+    {
+      "cid": "19",
+      "title": "[HTML/CSS] 关于CSS各个元素之间的关系",
+      "slug": "19",
+      "date": "2020-10-18",
+      "modified": "2020-10-18",
+      "description": "我是一个前端小白，今天写CSS的时候突然意识到原来还有这类区别: 这三类是有区别的. 其实不难推出: - 第一种情况下，只有在第一层div拥有.example元素，并且在他的子集div中含有任意的.subone元素，就会匹配。 - 第二种情况下，当一个div中同时含有.example和.subone元素时，就会匹配。 - 第三种情况下，当第一层div拥有.example元素，并且距离他的相邻子集d...",
+      "excerpt": "我是一个前端小白，今天写CSS的时候突然意识到原来还有这类区别: 这三类是有区别的. 其实不难推出: 第一种情况下，只有在第一层div拥有.example元素，并且在他的子集div中含有任意的.subone元素，就会匹配。 第二种情况下，当一个div中同时含有.example和.subone元素时，就会匹配。 第三种情况下，当第一层div拥有.example元素，并且距离他的相邻子集div(第二层...",
+      "categories": [
+        {
+          "mid": "6",
+          "name": "HTML",
+          "slug": "html",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "4",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "html"
+      ],
+      "body": "我是一个前端小白，今天写CSS的时候突然意识到原来还有这类区别:\n\n```css\ndiv.example .subone {}\ndiv.example.subone {}\ndiv.example > .subone {}\n```\n\n这三类是有区别的. 其实不难推出:\n\n- 第一种情况下，只有在第一层div拥有.example元素，并且在他的子集div中含有任意的.subone元素，就会匹配。\n- 第二种情况下，当一个div中同时含有.example和.subone元素时，就会匹配。\n- 第三种情况下，当第一层div拥有.example元素，并且距离他的相邻子集div(第二层)含有.subone元素，就会匹配。\n\n搞懂了！\n",
+      "url": "post.html?slug=19"
+    },
+    {
+      "cid": "17",
+      "title": "[Linux-FileSystem] find指令常用写法",
+      "slug": "17",
+      "date": "2020-09-29",
+      "modified": "2022-06-16",
+      "description": "今天又在瞎折腾，然后想到了这个很久没有使用过的指令。想着想着就觉得把它稍微介绍下。 1. 按文件名查找 find path expression | path=需要查找的路径; expression=查找的文件-/夹名称 例如: find / -name 'owoblog ' # 该指令将会在根目录查找所有匹配开头是 owoblog 字样的文件-/夹 find . -name 'owoblog '...",
+      "excerpt": "今天又在瞎折腾，然后想到了这个很久没有使用过的指令。想着想着就觉得把它稍微介绍下。 按文件名查找 语法： path : 需要查找的路径。 expression : 查找的文件或文件夹名称。 例如： 按文件特征查找 以下段落转载自原文，整理为便于阅读的命令示例： 以上用法为常用写法，更多方法可以访问上方的转载链接。",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 7,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "7",
+          "name": "Linux",
+          "slug": "linux",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "5",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "linux"
+      ],
+      "body": "今天又在瞎折腾，然后想到了这个很久没有使用过的指令。想着想着就觉得把它稍微介绍下。\n\n## 按文件名查找\n\n语法：\n\n```bash\nfind path expression\n```\n\n- `path`: 需要查找的路径。\n- `expression`: 查找的文件或文件夹名称。\n\n例如：\n\n```bash\nfind / -name 'owoblog'\nfind . -name 'owoblog'\nfind /home -name 'owoblog*'\n```\n\n## 按文件特征查找\n\n以下段落转载自原文，整理为便于阅读的命令示例：\n\n```bash\nfind / -amin -10      # 查找在系统中最后10分钟访问的文件（access time）\nfind / -atime -2      # 查找在系统中最后48小时访问的文件\nfind / -empty         # 查找在系统中为空的文件或者文件夹\nfind / -group cat     # 查找在系统中属于 group 为 cat 的文件\nfind / -mmin -5       # 查找在系统中最后5分钟里修改过的文件（modify time）\nfind / -mtime -1      # 查找在系统中最后24小时里修改过的文件\nfind / -user fred     # 查找在系统中属于 fred 这个用户的文件\nfind / -size +10000c  # 查找出大于10000000字节的文件\nfind / -size -1000k   # 查找出小于1000KB的文件\n```\n\n以上用法为常用写法，更多方法可以访问上方的转载链接。\n",
+      "url": "post.html?slug=17"
+    },
+    {
+      "cid": "15",
+      "title": "[PHP]有关于数组的蜜汁问题",
+      "slug": "15",
+      "date": "2020-08-20",
+      "modified": "2020-08-20",
+      "description": "最近因为需要比较两个数组内的元素，但恰好这两个数组内的元素都是未知的，也就导致了一个问题，无法使用array_diff比较他们的差异，例如 Array(1) ([0] => string(1) \"k\") 和 Array(1) (\"aaa\" => int(0)) 没办法进行比较。所以我就想到了利用array_search的方式自行写一个函数。然后蜜汁的问题来了， 现有以下代码，在调试后却会得到： <...",
+      "excerpt": "最近因为需要比较两个数组内的元素，但恰好这两个数组内的元素都是未知的，也就导致了一个问题，无法使用array diff比较他们的差异，例如 Array(1) ([0] = string(1) \"k\") 和 Array(1) (\"aaa\" = int(0)) 没办法进行比较。所以我就想到了利用array search的方式自行写一个函数。然后蜜汁的问题来了， 现有以下代码，在调试后却会得到： 我整个...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 8,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "3",
+          "name": "PHP",
+          "slug": "php",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "1",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "php"
+      ],
+      "body": "最近因为需要比较两个数组内的元素，但恰好这两个数组内的元素都是未知的，也就导致了一个问题，无法使用array_diff比较他们的差异，例如 Array(1) ([0] => string(1) \"k\") 和 Array(1) (\"aaa\" => int(0)) 没办法进行比较。所以我就想到了利用array_search的方式自行写一个函数。然后蜜汁的问题来了， 现有以下代码，在调试后却会得到：\n\n```php\n<?php\n$array = [\"a\"];\nvar_dump(isset($array[true]));  // print bool(false);\nvar_dump(isset($array[false])); // print bool(true);\nvar_dump(isset($array[\"a\"]));   // print bool(true);\n?>\n```\n\n我整个人都懵了，这个结果完全不是我想要的好伐。为什么会突然想起这个问题，因为在使用array_search()这个方法的时候，若存在这个键名，则会返回这个键名，不存在则会返回false。于是乎，又因为以上的测试代码，导致我差点没发现这个bug。所以有的时候不能为了节省代码的行数而节省啊！该分开写的时候还是得分开写~\n",
+      "url": "post.html?slug=15"
+    },
+    {
+      "cid": "14",
+      "title": "[LOG][2020-08-02] 再次回归.",
+      "slug": "14",
+      "date": "2020-08-01",
+      "modified": "2020-08-20",
+      "description": "历经了1个月的服务器数据重组以及重新部署, 我成功的将原来的博客数据转移到了这台新的服务器上. 今日开始将重新稳定运行此博客.",
+      "excerpt": "历经了1个月的服务器数据重组以及重新部署, 我成功的将原来的博客数据转移到了这台新的服务器上. 今日开始将重新稳定运行此博客.",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 2,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "历经了1个月的服务器数据重组以及重新部署, 我成功的将原来的博客数据转移到了这台新的服务器上. 今日开始将重新稳定运行此博客.\n",
+      "url": "post.html?slug=14"
+    },
+    {
+      "cid": "13",
+      "title": "[JS]之async/await",
+      "slug": "13",
+      "date": "2020-05-17",
+      "modified": "2020-05-17",
+      "description": "转载来自https://segmentfault.com/a/1190000007535316. 理解 JavaScript 的 async/await asyncjavascript 发布于 2016-11-19 约 16 分钟 随着 Node v7 的发布，越来越多的人开始研究据说是异步编程终级解决方案的 async/await。我第一次看到这组关键字并不是在 JavaScript 语言里，而...",
+      "excerpt": "转载来自https://segmentfault.com/a/1190000007535316. 理解 JavaScript 的 async/await asyncjavascript 发布于 2016 11 19 约 16 分钟 随着 Node v7 的发布，越来越多的人开始研究据说是异步编程终级解决方案的 async/await。我第一次看到这组关键字并不是在 JavaScript 语言里，而...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 3,
+          "order": "1",
+          "parent": "0"
+        },
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 9,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "10",
+          "name": "JS",
+          "slug": "js",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "7",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "default",
+        "web",
+        "js"
+      ],
+      "body": "转载来自https://segmentfault.com/a/1190000007535316.\n\n理解 JavaScript 的 async/await asyncjavascript 发布于 2016-11-19   约 16 分钟 随着 Node v7 的发布，越来越多的人开始研究据说是异步编程终级解决方案的 async/await。我第一次看到这组关键字并不是在 JavaScript 语言里，而是在 C# 5.0 的语法中。C# 的 async/await 需要在 .NET Framework 4.5 以上的版本中使用，因此我还很悲伤了一阵——为了要兼容 XP 系统，我们开发的软件不能使用高于 4.0 版本的 .NET Framework。\n\n我之前在《闲谈异步调用“扁平”化》 中就谈到了这个问题。无论是在 C# 还是 JavaScript 中，async/await 都是非常棒的特性，它们也都是非常甜的语法糖。C# 的 async/await 实现离不开 Task 或 Task 类，而 JavaScript 的 async/await 实现，也离不开 Promise。\n\n现在抛开 C# 和 .NET Framework，专心研究下 JavaScript 的 async/await。\n\nasync 和 await 在干什么 任意一个名称都是有意义的，先从字面意思来理解。async 是“异步”的简写，而 await 可以认为是 async wait 的简写。所以应该很好理解 async 用于申明一个 function 是异步的，而 await 用于等待一个异步方法执行完成。\n\n另外还有一个很有意思的语法规定，await 只能出现在 async 函数中。然后细心的朋友会产生一个疑问，如果 await 只能出现在 async 函数中，那这个 async 函数应该怎么调用？\n\n如果需要通过 await 来调用一个 async 函数，那这个调用的外面必须得再包一个 async 函数，然后……进入死循环，永无出头之日……\n\n如果 async 函数不需要 await 来调用，那 async 到底起个啥作用？\n\nasync 起什么作用 这个问题的关键在于，async 函数是怎么处理它的返回值的！\n\n我们当然希望它能直接通过 return 语句返回我们想要的值，但是如果真是这样，似乎就没 await 什么事了。所以，写段代码来试试，看它到底会返回什么：\n\n```javascript\nasync function testAsync() { return \"hello async\"; }\n```\n\n```javascript\nconst result = testAsync(); console.log(result);\n```\n\n看到输出就恍然大悟了——输出的是一个 Promise 对象。\n\n```batch\nc:\\var\\test> node --harmony_async_await . Promise { 'hello async' }\n```\n\n所以，async 函数返回的是一个 Promise 对象。从文档中也可以得到这个信息。async 函数（包含函数语句、函数表达式、Lambda表达式）会返回一个 Promise 对象，如果在函数中 return 一个直接量，async 会把这个直接量通过 Promise.resolve() 封装成 Promise 对象。\n\nasync 函数返回的是一个 Promise 对象，所以在最外层不能用 await 获取其返回值的情况下，我们当然应该用原来的方式：then() 链来处理这个 Promise 对象，就像这样\n\n```javascript\ntestAsync().then(v => { console.log(v);    // 输出 hello async });\n```\n\n现在回过头来想下，如果 async 函数没有返回值，又该如何？很容易想到，它会返回 Promise.resolve(undefined)。\n\n联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。\n\n那么下一个关键点就在于 await 关键字了。\n\nawait 到底在等啥 一般来说，都认为 await 是在等待一个 async 函数完成。不过按语法说明，await 等待的是一个表达式，这个表达式的计算结果是 Promise 对象或者其它值（换句话说，就是没有特殊限定）。\n\n因为 async 函数返回一个 Promise 对象，所以 await 可以用于等待一个 async 函数的返回值——这也可以说是 await 在等 async 函数，但要清楚，它等的实际是一个返回值。注意到 await 不仅仅用于等 Promise 对象，它可以等任意表达式的结果，所以，await 后面实际是可以接普通函数调用或者直接量的。所以下面这个示例完全可以正确运行\n\n```javascript\nfunction getSomething() { return \"something\"; }\n```\n\n```javascript\nasync function testAsync() { return Promise.resolve(\"hello async\"); }\n```\n\n```javascript\nasync function test() { const v1 = await getSomething(); const v2 = await testAsync(); console.log(v1, v2); }\n```\n\n```javascript\ntest();\n```\n\nawait 等到了要等的，然后呢？await 等到了它要等的东西，一个 Promise 对象，或者其它值，然后呢？我不得不先说，await 是个运算符，用于组成表达式，await 表达式的运算结果取决于它等的东西。\n\n如果它等到的不是一个 Promise 对象，那 await 表达式的运算结果就是它等到的东西。\n\n如果它等到的是一个 Promise 对象，await 就忙起来了，它会阻塞后面的代码，等着 Promise 对象 resolve，然后得到 resolve 的值，作为 await 表达式的运算结果。\n\n看到上面的阻塞一词，心慌了吧……放心，这就是 await 必须用在 async 函数中的原因。async 函数调用不会造成阻塞，它内部所有的阻塞都被封装在一个 Promise 对象中异步执行。 async/await 帮我们干了啥 作个简单的比较 上面已经说明了 async 会将其后的函数（函数表达式或 Lambda）的返回值封装成一个 Promise 对象，而 await 会等待这个 Promise 完成，并将其 resolve 的结果返回出来。\n\n现在举例，用 setTimeout 模拟耗时的异步操作，先来看看不用 async/await 会怎么写\n\n```javascript\nfunction takeLongTime() { return new Promise(resolve => { setTimeout(() => resolve(\"long_time_value\"), 1000); }); }\n```\n\n```javascript\ntakeLongTime().then(v => { console.log(\"got\", v); });\n```\n\n如果改用 async/await 呢，会是这样\n\n```javascript\nfunction takeLongTime() { return new Promise(resolve => { setTimeout(() => resolve(\"long_time_value\"), 1000); }); }\n```\n\n```javascript\nasync function test() { const v = await takeLongTime(); console.log(v); }\n```\n\n```javascript\ntest();\n```\n\n眼尖的同学已经发现 takeLongTime() 没有申明为 async。实际上，takeLongTime() 本身就是返回的 Promise 对象，加不加 async 结果都一样，如果没明白，请回过头再去看看上面的“async 起什么作用”。\n\n又一个疑问产生了，这两段代码，两种方式对异步调用的处理（实际就是对 Promise 对象的处理）差别并不明显，甚至使用 async/await 还需要多写一些代码，那它的优势到底在哪？\n\nasync/await 的优势在于处理 then 链 单一的 Promise 链并不能发现 async/await 的优势，但是，如果需要处理由多个 Promise 组成的 then 链的时候，优势就能体现出来了（很有意思，Promise 通过 then 链来解决多层回调的问题，现在又用 async/await 来进一步优化它）。\n\n假设一个业务，分多个步骤完成，每个步骤都是异步的，而且依赖于上一个步骤的结果。我们仍然用 setTimeout 来模拟异步操作：\n\n```javascript\n/**\n```\n\n- 传入参数 n，表示这个函数执行的时间（毫秒）\n\n- 执行的结果是 n + 200，这个值将用于下一步骤\n\n```javascript\n*/ function takeLongTime(n) { return new Promise(resolve => { setTimeout(() => resolve(n + 200), n); }); }\n```\n\n```javascript\nfunction step1(n) { console.log(`step1 with ${n}`); return takeLongTime(n); }\n```\n\n```javascript\nfunction step2(n) { console.log(`step2 with ${n}`); return takeLongTime(n); }\n```\n\n```javascript\nfunction step3(n) { console.log(`step3 with ${n}`); return takeLongTime(n); }\n```\n\n现在用 Promise 方式来实现这三个步骤的处理\n\n```javascript\nfunction doIt() { console.time(\"doIt\"); const time1 = 300; step1(time1) .then(time2 => step2(time2)) .then(time3 => step3(time3)) .then(result => { console.log(`result is ${result}`); console.timeEnd(\"doIt\"); }); }\n```\n\n```javascript\ndoIt();\n```\n\n```text\nc:\\var\\test>node --harmony_async_await .\nstep1 with 300\nstep2 with 500\nstep3 with 700\nresult is 900\ndoIt: 1507.251ms\n```\n\n输出结果 result 是 step3() 的参数 700 + 200 = 900。doIt() 顺序执行了三个步骤，一共用了 300 + 500 + 700 = 1500 毫秒，和 console.time()/console.timeEnd() 计算的结果一致。\n\n如果用 async/await 来实现呢，会是这样\n\nasync function doIt() { console.time(\"doIt\"); const time1 = 300; const time2 = await step1(time1); const time3 = await step2(time2); const result = await step3(time3); console.log(`result is ${result}`); console.timeEnd(\"doIt\"); }\n\n```javascript\ndoIt();\n```\n\n结果和之前的 Promise 实现是一样的，但是这个代码看起来是不是清晰得多，几乎跟同步代码一样\n\n还有更酷的 现在把业务要求改一下，仍然是三个步骤，但每一个步骤都需要之前每个步骤的结果。\n\n```javascript\nfunction step1(n) { console.log(`step1 with ${n}`); return takeLongTime(n); }\n```\n\n```javascript\nfunction step2(m, n) { console.log(`step2 with ${m} and ${n}`); return takeLongTime(m + n); }\n```\n\n```javascript\nfunction step3(k, m, n) { console.log(`step3 with ${k}, ${m} and ${n}`); return takeLongTime(k + m + n); }\n```\n\n这回先用 async/await 来写：\n\nasync function doIt() { console.time(\"doIt\"); const time1 = 300; const time2 = await step1(time1); const time3 = await step2(time1, time2); const result = await step3(time1, time2, time3); console.log(`result is ${result}`); console.timeEnd(\"doIt\"); }\n\n```javascript\ndoIt();\n```\n\n// c:\\var\\test>node --harmony_async_await . // step1 with 300 // step2 with 800 = 300 + 500 // step3 with 1800 = 300 + 500 + 1000 // result is 2000 // doIt: 2907.387ms 除了觉得执行时间变长了之外，似乎和之前的示例没啥区别啊！别急，认真想想如果把它写成 Promise 方式实现会是什么样子？\n\nfunction doIt() { console.time(\"doIt\"); const time1 = 300; step1(time1) .then(time2 => { return step2(time1, time2) .then(time3 => [time1, time2, time3]); }) .then(times => { const [time1, time2, time3] = times; return step3(time1, time2, time3); }) .then(result => { console.log(`result is ${result}`); console.timeEnd(\"doIt\"); }); }\n\n```javascript\ndoIt();\n```\n\n有没有感觉有点复杂的样子？那一堆参数处理，就是 Promise 方案的死穴—— 参数传递太麻烦了，看着就晕！\n",
+      "url": "post.html?slug=13"
+    },
+    {
+      "cid": "12",
+      "title": "[COVID-19] RIP. 2020-04-04",
+      "slug": "12",
+      "date": "2020-04-04",
+      "modified": "2020-04-21",
+      "description": "愿逝者安息。",
+      "excerpt": "愿逝者安息。",
+      "categories": [
+        {
+          "mid": "5",
+          "name": "Nginx",
+          "slug": "nginx",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "3",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "nginx"
+      ],
+      "body": "愿逝者安息。\n",
+      "url": "post.html?slug=12"
+    },
+    {
+      "cid": "11",
+      "title": "[AirPlane]FMC提示DRAG REQUIRED",
+      "slug": "11",
+      "date": "2020-02-11",
+      "modified": "2020-04-21",
+      "description": "DRAG REQUIRED 为需要阻力。 垂直导航生效和需要添加阻力，打开减速板一类的可以增大飞机阻力的外设，或者自动油门断开并减少推力，以保持该垂直导航下降飞行航迹",
+      "excerpt": "DRAG REQUIRED 为需要阻力。 垂直导航生效和需要添加阻力，打开减速板一类的可以增大飞机阻力的外设，或者自动油门断开并减少推力，以保持该垂直导航下降飞行航迹",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 4,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "DRAG REQUIRED 为需要阻力。 垂直导航生效和需要添加阻力，打开减速板一类的可以增大飞机阻力的外设，或者自动油门断开并减少推力，以保持该垂直导航下降飞行航迹\n",
+      "url": "post.html?slug=11"
+    },
+    {
+      "cid": "10",
+      "title": "[Web]HTTP请求出现 \"405 Not Allowed\" 的一种解决办法",
+      "slug": "10",
+      "date": "2020-02-11",
+      "modified": "2020-02-11",
+      "description": "今天莫名其妙的发现静态HTML文件发送POST请求后Nginx返回了错误代码405，百度一看才发现原来静态HTML不允许POST请求。 所以需要向下面这样修改： -- 下文转载自 \"https://www.w3h5.com/post/419.html\". 修改 Nginx 的配置文件：nginx.conf 在你的nginx的虚拟主机配置文件中添加以下内容：\" error_page 405 =200...",
+      "excerpt": "今天莫名其妙的发现静态HTML文件发送POST请求后Nginx返回了错误代码405，百度一看才发现原来静态HTML不允许POST请求。 所以需要向下面这样修改： 下文转载自 \"https://www.w3h5.com/post/419.html\". 修改 Nginx 的配置文件：nginx.conf 在你的nginx的虚拟主机配置文件中添加以下内容：\"error page 405 =200 $ur...",
+      "categories": [
+        {
+          "mid": "5",
+          "name": "Nginx",
+          "slug": "nginx",
+          "type": "category",
+          "description": null,
+          "count": 2,
+          "order": "3",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "nginx"
+      ],
+      "body": "今天莫名其妙的发现静态HTML文件发送POST请求后Nginx返回了错误代码405，百度一看才发现原来静态HTML不允许POST请求。 所以需要向下面这样修改：\n\n-- 下文转载自 \"https://www.w3h5.com/post/419.html\". 修改 Nginx 的配置文件：nginx.conf 在你的nginx的虚拟主机配置文件中添加以下内容：\"error_page  405 =200 $uri;\"\n\n```nginx\nserver {\n  # 假如加入这是你的虚拟主机配置文件：\n  listen 80;\n  root localhost;\n  index index.php index.html;\n\n  location / {\n    try_files $uri $uri/ /index.html;\n  }\n  # To allow POST on static pages 允许静态页使用POST方法\n  error_page  405 =200 $uri;\n}\n```\n",
+      "url": "post.html?slug=10"
+    },
+    {
+      "cid": "9",
+      "title": "[加油武汉!]我想对新型冠状病毒说",
+      "slug": "9",
+      "date": "2020-02-08",
+      "modified": "2020-02-08",
+      "description": "眼看着2月份都只剩下20天了，现在的感染人数还是有增不减。经历过2003年的那场瘟疫知道了SARS的可怕，2020年又重演。历史总是像俄罗斯转轮一样，喜欢戏弄着人类的生命。所以，一切厄运快快走开啦！",
+      "excerpt": "眼看着2月份都只剩下20天了，现在的感染人数还是有增不减。经历过2003年的那场瘟疫知道了SARS的可怕，2020年又重演。历史总是像俄罗斯转轮一样，喜欢戏弄着人类的生命。所以，一切厄运快快走开啦！",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 5,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "眼看着2月份都只剩下20天了，现在的感染人数还是有增不减。经历过2003年的那场瘟疫知道了SARS的可怕，2020年又重演。历史总是像俄罗斯转轮一样，喜欢戏弄着人类的生命。所以，一切厄运快快走开啦！\n",
+      "url": "post.html?slug=9"
+    },
+    {
+      "cid": "8",
+      "title": "[AirPlane] A.S.M. 的意思",
+      "slug": "8",
+      "date": "2019-12-16",
+      "modified": "2020-09-07",
+      "description": "A.S.M. 为\"辅助平衡自动校准仪\". [其他含义] ASM为Assembly的简写，ASM指令的含义为汇编指令（泛指Intel 80X86 CPU中的指令集）。 ASM指令是为编程人员编写程序准备的，编译器将会把ASM指令真正的翻译成机器代码（能控制CPU做出操作的代码）。 ASM至今运用广泛，2015年所有的个人电脑，大型服务器绝大多数使用ASM指令集。 ASM的优点在于指令广泛和丰富，处理...",
+      "excerpt": "A.S.M. 为\"辅助平衡自动校准仪\". [其他含义] ASM为Assembly的简写，ASM指令的含义为汇编指令（泛指Intel 80X86 CPU中的指令集）。 ASM指令是为编程人员编写程序准备的，编译器将会把ASM指令真正的翻译成机器代码（能控制CPU做出操作的代码）。 ASM至今运用广泛，2015年所有的个人电脑，大型服务器绝大多数使用ASM指令集。 ASM的优点在于指令广泛和丰富，处理...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 6,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "A.S.M. 为\"辅助平衡自动校准仪\". [其他含义] ASM为Assembly的简写，ASM指令的含义为汇编指令（泛指Intel 80X86 CPU中的指令集）。 ASM指令是为编程人员编写程序准备的，编译器将会把ASM指令真正的翻译成机器代码（能控制CPU做出操作的代码）。 ASM至今运用广泛，2015年所有的个人电脑，大型服务器绝大多数使用ASM指令集。 ASM的优点在于指令广泛和丰富，处理大型数据游刃有余，但是缺点也是显而易见的，由于指令的长度不等与指令的复杂，其耗能大，CPU体积也大。 与ASM对立的是ARM， 一种相对ASM指令较少，指令长度相等，耗能低，CPU体积小，运行在ARM处理器上的汇编语言（这种汇编语言常见于智能手机上，主要原因是耗能问题）。\n",
+      "url": "post.html?slug=8"
+    },
+    {
+      "cid": "7",
+      "title": "[AirPlane]飞机的各种速度 (缩写和英文全称)",
+      "slug": "7",
+      "date": "2019-12-16",
+      "modified": "2019-12-16",
+      "description": "原帖地址: http://blog.sina.com.cn/s/blog_8d31c0700102wm4n.html V - SPEEDS DEFINED This information is based on data provided by Kenny Stone (DC3-603), George Leach (DC3-754), a search of the Internet and ...",
+      "excerpt": "原帖地址: http://blog.sina.com.cn/s/blog 8d31c0700102wm4n.html V SPEEDS DEFINED This information is based on data provided by Kenny Stone (DC3 603), George Leach (DC3 754), a search of the Internet and FS...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 7,
+          "order": "1",
+          "parent": "0"
+        },
+        {
+          "mid": "9",
+          "name": "文章转载",
+          "slug": "reprinted",
+          "type": "category",
+          "description": null,
+          "count": 0,
+          "order": "1",
+          "parent": "1"
+        }
+      ],
+      "tags": [
+        "default",
+        "reprinted"
+      ],
+      "body": "原帖地址: http://blog.sina.com.cn/s/blog_8d31c0700102wm4n.html\n\nV - SPEEDS DEFINED\n\nThis information is based on data provided by Kenny Stone (DC3-603), George Leach (DC3-754), a search of the Internet and FS2000 manuals.\n\nNumbers are usually stated, as in \"Vee One\" for V1. Lower case letters, many times shown as a subscript font, are referred to as \"sub\" as in \"Vee sub a\" for Va.\n\nV1 - Takeoff Decision Speed - maximum speed during takeoff that will allow the pilot to stop on the remaining runway in case of a rejected (aborted) takeoff.\n\nV2 - Takeoff Safety Speed - Speed at 35 feet AGL assuming engine failure at V1.\n\nVa - Maneuvering Speed - Sometimes referred to as the \"speed for maximum control deflection\" or the \"rough air airspeed.\" When flying above this speed it is unwise to make full, abrupt application of the primary flight controls and gust-induced loads can exceed the structural design limit.\n\nVb - Turbulence Penetration Speed - design speed for maximum gust intensity. Developed by the designer as a recommended turbulence penetration speed for an aircraft in severe turbulence\n\nVbg - Best Power-off Glide Speed - the CAS that provides minimum drag thus a best glide ratio, providing the greatest flight distance available from the potential energy of height.\n\nVbe - Best Endurance Speed - the CAS that gives the greatest airborne time for fuel aboard, i.e., the least fuel consumption per hour.\n\nVbr - Best Range Speed - the speed that provides a lift/drag ratio that provides minimum drag and minimum power required and consequently greatest air distance for fuel on board.\n\nVc - Cruise Speed - the design cruising speed or the optimum cruise speed. Vd - Design Dive Speed - Is usually 1.4 times Vno.\n\nVg - Best Glide Speed - The speed that will afford the best range for a given altitude without engine power.\n\nVh - Maximum Level Flight Indicated Speed (CAS) - the maximum using continuous engine power.\n\nVfe - Maximum Flap Extended Speed - The maximum speed for flight with flaps extended. Indicated by the top end of the White Arc on the Airspeed Indicator. Higher speeds, with flaps down, may result in damage to the flaps or to the extension mechanism\n\nVle - Maximum Landing Gear Extended Speed - For planes with\n\nretractable landing gear, the maximum speed at which the gear can remain extended without damage to gear doors.\n\nVlo - Maximum Landing Gear Operating Speed - For planes with retractable landing gear, the maximum speed at which the landing gear system can be operated (extend or retract).\n\nVmc - Minimum Control Speed - This is a speed the manufacturer determines based on eight factors specified by the FAA. In general, with gear down and flaps in takeoff position, it is the minimum speed where the pilot can maintain control of the aircraft with the critical engine inoperative.\n\nVmd - Minimum Descent Speed - The speed that results in the lowest rate of sink in a power-off glide, providing the longest duration of flight from the potential energy of height.\n\nVmo - Maximum Operating Speed - The speed that must not be exceeded in any flight regime.\n\nVmu - Minimum Unstick Speed - An indicated speed (CAS) used in take-off conditions where it is advisable to lift off at the lowest possible airspeed to get the tires off the surface, e.g. soft field or wet grass and safely fly in ground effect until Vtoss is attained.\n\nVne - Never Exceed Speed - The speed, which must not be exceeded in smooth air. The Red Line at the top end of the Airspeed Indicator's Yellow Arc. Vne is set at 90% of Vd to provide a \"flutter\" margin.\n\nVno - Maximum Structural Cruise Speed - When cruising at, and below, Vno the aircraft should not be damaged by a 30 feet/second vertical gust. It is indicated by the top end of the Airspeed Indicator's Green Arc. Smooth air only for speeds in the Yellow Arc.\n\nVr - Rotation Speed - The speed at which the pilot raises the nose up for takeoff.\n\nVref - Final Approach - A safe speed for final approach and it should be 1.3 times Vso\n\nVs - Stalling Speed - The minimum steady flight speed obtained in a specific configuration (clean) indicated by the bottom end of the Green Arc on the Airspeed Indicator.\n\nVs1 - Stalling Speed - Same as Vs, except for a specific configuration.\n\nVso - Stalling Speed Landing - The minimum steady flight speed in the landing configuration. Bottom of the White Arc on the Airspeed Indicator.\n\nVtoss - Minimum Takeoff Safety Speed - An indicated speed (CAS) chosen to ensure that adequate control will still exist during initial climb after lift off under conditions of turbulence - or even engine failure. After lift off the aircraft should not be allowed to climb away until Vtoss is attained.\n\nVx - Best Angle Of Climb Speed - The speed that will produce the greatest amount of height over the shortest ground distance using maximum thrust available.\n\nVxse - Best Angle Of Climb Speed, Single Engine - The same as Vx based on a single engine.\n\nVy - Best Rate Of Climb Speed - The speed that will produce the most height in the shortest time using maximum power.\n\nVyse - Best Rate Of Climb Speed, Single Engine - The same as Vy based on a single engine.\n\n·指示空速( Indicated Air Speed )\n\n指示空速又称表速，用符号VI 表示，其读数是修正了仪表误差后，空速表的指示速度。该速度的常用缩写表达式为IAS。\n\n·校正空速（Calibrated Air Speed）\n\n校正空速用符号VC表示，是指示空速数值经过位置误差修正后的空速表读数，其缩写形式为CAS。\n\n·当量空速（Equivalent Air Speed）\n\n当量空速用符号VE 表示，是校正空速数据经过具体高度的绝热压缩流修正后的空速表读数，其缩写形式用EAS表示。\n\n·真实空速（True Air Speed）\n\n真实空速又称真空速，用符号VT 表示，是表示飞机飞行时相对于周围空气的速度，其缩写形式为TAS。\n\n·地速（Ground Speed）\n\n地速用符号VG 表示，是表示飞机在一种固定的地面坐标系中的飞行速度。\n\n·临界发动机失效速度（Critical Engine Failure Speed）\n\n临界发动机失效速度用符号VEF 表示，是假定临界发动机失效时的速度，用校正空速表示。\n\n·起飞决断速度（Decision Speed）\n\n起飞决断速度又称决断速度，用符号VI 表示，是飞行员能决定中断起飞并保证飞机在跑道限制长度内停下的最大速度。\n\n·抬前轮速度（Rotation Speed）\n\n抬前轮速度用符号VR 表示，是在起飞滑跑中驾驶员开始抬起前轮时的速度，以校正空速表示，抬前轮的速率大约为每秒2.5-3度。\n\n·离地速度（Liftoff Speed）\n\n离地速度用符号VLOF 表示，是飞机离开地面开始腾空瞬间的速度，这表明该瞬间飞机的升力开始大于机重，用校正空速表示。\n\n·最小离地速度（Minimum Unstick Speed）\n\n最小离地速度用符号Vmu 表示，在等于和高于该速度时，在全发工作或一发失效情况下飞机能安全离地并继续起飞，不会出现机尾触地的危险。\n\n·起飞安全速度（Takeoff Safety Speed）\n\n起飞安全速度又称起飞爬升速度（Takeoff Climb Speed），用符号V2 表示，是当飞机在一发失效时达到离地面上空35英尺时应达到的最小爬升速度，以校正空速表示。\n\n·地面最小操纵速度（Minimum Speed for Control on Ground）\n\n地面最小操纵速度用符号Vmcg表示，为校正空速。在该速度，临界发动机突然停车时，有可能使用气动主操纵（不用前轮转向和差动刹车）来恢复对飞机的操纵，用正常的驾驶技巧和不大于规定的操纵力能安全地完成继续起飞，并保证飞机在跑道上航迹偏离跑道中心线的水平距离不大于9米（30英尺）。\n\n·空中最小操纵速度（Minimum Speed for Control in Air）\n\n空中最小操纵速度用符号Vmca表示，为校正空速。在该速度时，临界发动机突然停车，能在该发动机停车而其余发动机为起飞推力情况下保持对飞机的操纵，并维持零偏航和坡度不大于5度的直线飞行。在纠偏过程中，只需正常的驾驶技巧且不超过规定的操纵力，航向变化不大于20度且不能出现危险的飞行姿态。\n\n·全发工作着陆进场期间的最小操纵速度（Minimum Control Speed during Approach and Landing）\n\n全发工作着陆进场期间的最小操纵速度用符号Vmcl表示，为校正空速，在该速度，当临界发动机突然停车时，能在该发动机继续停车的情况下，恢复对飞机的操纵，并维持零偏航或不大于5度的直线飞行。\n\n·失速速度（Stall Speed）\n\n失速速度是飞机可以操纵的定常飞行的最小速度，用符号Vs表示，以海里/小时计。当迎角明显大于最大升力系数所对应的迎角时，机翼上表面出现气流分离现象，使升力系数降低，并出现清晰可见的飞机失速现象。\n",
+      "url": "post.html?slug=7"
+    },
+    {
+      "cid": "6",
+      "title": "[OwOBlog#Log20191209]主题测试",
+      "slug": "6",
+      "date": "2019-12-09",
+      "modified": "2019-12-09",
+      "description": "嗯。。理所当然，这是一篇有关于本站点前台的主题日志。 目前还是有许多不足之处，在此我会发布有关这个主题的更新信息。 [2019-12-07] Ver. 201912070001 创建项目 开始绘制大概视图结构草图 根据试图结构草图构建CSS文件 应用前台 [2019-12-08] Ver. 201912070002 优化CSS代码 优化调试 加入BootStrap框架 使用响应式布局 [2019-...",
+      "excerpt": "嗯。。理所当然，这是一篇有关于本站点前台的主题日志。 目前还是有许多不足之处，在此我会发布有关这个主题的更新信息。 [2019 12 07] Ver. 201912070001 创建项目 开始绘制大概视图结构草图 根据试图结构草图构建CSS文件 应用前台 [2019 12 08] Ver. 201912070002 优化CSS代码 优化调试 加入BootStrap框架 使用响应式布局 [2019 ...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 8,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "嗯。。理所当然，这是一篇有关于本站点前台的主题日志。 目前还是有许多不足之处，在此我会发布有关这个主题的更新信息。\n\n[2019-12-07] Ver. 201912070001\n\n- 创建项目\n\n- 开始绘制大概视图结构草图\n\n- 根据试图结构草图构建CSS文件\n\n- 应用前台\n\n[2019-12-08] Ver. 201912070002\n\n- 优化CSS代码\n\n- 优化调试\n\n- 加入BootStrap框架\n\n- 使用响应式布局\n\n[2019-12-09] Ver.201912090001 = 发布测试\n\n- 优化小部分地方\n\n? 调整文章展示框布局 ! 我才发现Typecho的文本编辑器是Markdown...看来我得多学学Markdown的语法了.\n",
+      "url": "post.html?slug=6"
+    },
+    {
+      "cid": "5",
+      "title": "[Windows]如何删除\"远程桌面连接\"的历史记录?",
+      "slug": "5",
+      "date": "2019-12-09",
+      "modified": "2019-12-09",
+      "description": "按住 \"Windows+R\" 键, 输入 regedit\" 然后 \"Ctrl+Shift+Enter\" 键以管理员模式运行。 根据以下路径进入注册表: HKEY_CURRENT_USER -> Software -> Microsoft -> Terminal Server Client -> Default 找到你需要删除的记录删除即可。",
+      "excerpt": "按住 \"Windows+R\" 键, 输入 regedit\" 然后 \"Ctrl+Shift+Enter\" 键以管理员模式运行。 根据以下路径进入注册表: 找到你需要删除的记录删除即可。",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 10,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "8",
+          "name": "Windows",
+          "slug": "win",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "6",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "win"
+      ],
+      "body": "- 按住 \"Windows+R\" 键, 输入 regedit\" 然后 \"Ctrl+Shift+Enter\" 键以管理员模式运行。\n\n- 根据以下路径进入注册表:\n\n```reg\nHKEY_CURRENT_USER -> Software -> Microsoft -> Terminal Server Client -> Default\n```\n\n- 找到你需要删除的记录删除即可。\n",
+      "url": "post.html?slug=5"
+    },
+    {
+      "cid": "4",
+      "title": "[Office]ospp.vbs文件的作用",
+      "slug": "4",
+      "date": "2019-12-07",
+      "modified": "2019-12-09",
+      "description": "文章源地址: https://www.cnblogs.com/mahocon/p/8615210.html ospp.vbs是什么文件？激活过程cscript ospp.vbs命令详解 在Office 2013激活过程中我们经常会用到cscript ospp.vbs这个命令。那么，很有必要来了解一下，ospp.vbs到底是什么文件？Cscript.exe是脚本运行引擎，这里就不多介绍了。ospp全...",
+      "excerpt": "文章源地址: https://www.cnblogs.com/mahocon/p/8615210.html ospp.vbs是什么文件？激活过程cscript ospp.vbs命令详解 在Office 2013激活过程中我们经常会用到cscript ospp.vbs这个命令。那么，很有必要来了解一下，ospp.vbs到底是什么文件？Cscript.exe是脚本运行引擎，这里就不多介绍了。ospp全...",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 9,
+          "order": "1",
+          "parent": "0"
+        },
+        {
+          "mid": "9",
+          "name": "文章转载",
+          "slug": "reprinted",
+          "type": "category",
+          "description": null,
+          "count": 1,
+          "order": "1",
+          "parent": "1"
+        }
+      ],
+      "tags": [
+        "default",
+        "reprinted"
+      ],
+      "body": "文章源地址: https://www.cnblogs.com/mahocon/p/8615210.html\n\nospp.vbs是什么文件？激活过程cscript ospp.vbs命令详解 在Office 2013激活过程中我们经常会用到cscript ospp.vbs这个命令。那么，很有必要来了解一下，ospp.vbs到底是什么文件？Cscript.exe是脚本运行引擎，这里就不多介绍了。ospp全称为：Office Software Protection Platform，vbs大家都知道是脚本文件，所以得出结论，ospp.vbs就是：Office软件保护平台脚本。它是目前Office自身提供的激活管理工具。\n\nospp.vbs文件在哪里？\n\n该脚本位于%安装目录%\\ Program Files文件\\微软Office \\ Office15文件夹中。如果您运行的是32位Office 2013的64位操作系统，该脚本位于%安装目录%\\程序文件（x86）\\微软Office \\ Office15文件夹中。\n\nospp.vbs命令介绍\n\n命令有很多，不一一全部介绍了，说说几个激活过程中的常用命令。为了让大家看得更明白，下面我以我虚拟机里的Office 2003 Pro Plus做个演示。\n\nospp.vbs\n\n```batch\ncscript ospp.vbs /dstatus\n```\n\n显示当前已安装产品密钥的许可证信息。可以查看到自已安裝的版本有多少个序列号。\n\nospp.vbs\n\n```batch\ncscript ospp.vbs /unpkey:xxxxx\n```\n\n卸载已安装的产品密钥。后面的数字是密钥的最后5位数。\n\n此时再执行cscript ospp.vbs /dstatus发现产品密钥已经没有了，我重新进行导入。\n\nospp.vbs\n\n```batch\ncscript ospp.vbs /inpkey:xxxxx\n```\n\n安装、替换现有的产品密钥。和上面的过程刚好相反。\n\n```batch\ncscript ospp.vbs /sethst:x.x.x.x\n```\n\n设置KMS主机名。一般为IP地址。\n\n```batch\ncscript ospp.vbs /act\n```\n\n激活当前安装的Office。\n\n```batch\ncscript ospp.vbs /remhst\n```\n\n删除KMS主机名。\n\n一般来说掌握这么几个就可以了，如果你想要全面了解，我从微软官方网站上找到了全部的命令帮助说明，慢慢学习研究吧！\n\nGlobal options for ospp.vbs\n\n/act\tActivates installed Office 2013 product keys. /inpkey:value\tInstalls a product key (replaces existing key) with user-provided product key. Value option is required. /unpkey:value\tUninstalls an installed product key with the last five digits of the product key to uninstall (as displayed by the /dstatus option). Value parameter is required. /inslic:value\tInstalls a license with user-provided path of the .xrm-ms license. Value parameter is required. /dstatus\tDisplays license information for installed product keys. /dstatusall\tDisplays license information for all installed licenses. /dhistoryacterr\tDisplays the failure history for MAK/Retail activation. /dinstid\tDisplays Installation ID for offline activation. /actcid:value\tActivates product with user-provided Confirmation ID. Value parameter is required. /rearm\tResets the licensing status for all installed Office 2013 product keys. /rearm:value\tResets the licensing status for an Office 2013 license with a user-provided SKUID value. Value parameter is required. Use this option with the SKUID value specified by using the /dstatus option if you have run out of rearms and have activated Office through KMS or AD-based activation to gain an additional rearm. /ddescr:value\tDisplays the description for a user-provided error code. Value parameter is required. KMS client options for ospp.vbs\n\n/dhistorykms\tDisplays KMS client activation history. /dcmid\tDisplays KMS client machine ID (CMID). /sethst:value\tSets a KMS host name with a user-provided host name. Value parameter is required. This sets HKLM\\Software\\Microsoft\\OfficeSoftwareProtectionPlatform\\KeyManagementServiceName (REG_SZ). /setprt:value\tSets a KMS port with a user-provided port number. Value parameter is required. This sets HKLM\\Software\\Microsoft\\OfficeSoftwareProtectionPlatform\\KeyManagementServicePort (REG_SZ). /remhst\tRemoves KMS host name (sets port to default). /cachst:value\tAllows or denies KMS host caching. Value parameter is required (TRUE or FALSE). /actype:value\t(Windows 8 and newer versions only) Sets volume activation type. Value parameter is required. Values: 1 (for Active Directory-Based), 2 (for KMS). 0 (for both). /skms-domain:value\t(Windows 8 and newer versions only) Sets the specific DNS domain in which all KMS SRV records can be found. This setting has no effect if the specific single KMS host is set by the /sethst option. Value parameter is the Fully Qualified Domain Name (FQDN) and is required. /ckms-domain\t(Windows 8 and newer versions only) Clears the specific DNS domain in which all KMS SRV records can be found. The specific KMS host is used if it is set by the /sethst option. Otherwise, auto-discovery of the KMS host is used. 用在线Google翻译如下。机器翻译肯定不会很通顺，不过能大慨看懂。\n\n全局命令\n\n/ ACT\t激活安装的Office 2013产品密钥。 / inpkey：值\t用户提供的产品密钥安装产品密钥（替换现有密钥）。值选项是必需的。 / unpkey：值\t卸载已安装的产品密钥的最后5位数字的产品密钥卸载（显示的/ dstatus选项）。Value参数是必需的。 / inslic：值\t安装许可证的。XRM-MS许可证的用户提供的路径。Value参数是必需的。 / dstatus\t显示已安装的产品密钥的许可证信息。 / dstatusall\t显示所有已安装许可证的许可信息。 / dhistoryacterr\t显示的故障历史记录的MAK /零售激活。 / dinstid\t显示安装ID为脱机激活。 / actcid：值\t用户提供的确认ID激活产品。Value参数是必需的。 /重新武装\t复位的授权状态，所有已安装的Office 2013产品密钥。 /重整价值\t重设许可状态的Office 2013许可证与用户提供SKUID的价值。Value参数是必需的。 使用此选项指定的值通过使用的/ dstatus选项，如果你有用完的重新激活和已激活的Office通过KMS或基于AD-激活的获得额外的重新武装SKUID 。 / ddescr：值\t显示为用户提供的错误代码的描述。Value参数是必需的。 KMS客户端的命令\n\n/ dhistorykms\t显示KMS客户端激活历史记录。 / dcmid\t显示KMS客户端计算机ID（CMID）。 / sethst：值\t设置KMS主机名和用户提供的主机名。Value参数是必需的。 此设置HKLM \\软件\\微软\\ OfficeSoftwareProtectionPlatform \\ KeyManagementServiceName（REG_SZ）。 / setprt：值\t设置KMS端口与用户提供的端口号。Value参数是必需的。 此设置HKLM \\软件\\微软\\ OfficeSoftwareProtectionPlatform \\ KeyManagementServicePort（REG_SZ）。 / remhst\t删除KMS主机名（将端口设置为默认）。 / cachst：值\t允许或拒绝KMS主机缓存。Value参数是必需的（TRUE或FALSE）。 / actype：值\t（Windows 8和较新的版本只）设置批量激活的类型。Value参数是必需的。 值：1（基于Active Directory），2（KMS）。0（两个）。 / SKMS域值\t（Windows 8和较新的版本只）设置特定的DNS域的所有KMS SRV记录可以发现。如果特定的单一KMS主机的/ sethst选项，该设置没有任何影响。Value参数是完全合格的域名称（FQDN）是必需的。 / CKMS域\t（Windows 8和较新的版本只）清除所有KMS SRV记录可以发现特定的DNS域名。使用特定的KMS主机，如果它被设置的/ sethst选项。否则，自动发现使用的KMS主机。\n",
+      "url": "post.html?slug=4"
+    },
+    {
+      "cid": "3",
+      "title": "[Windows]设备管理器的基础管理",
+      "slug": "3",
+      "date": "2019-12-06",
+      "modified": "2019-12-06",
+      "description": "最近新组了台家用主机顺便兼当服务器用，然后配了个无线网卡。但由于原先的无线网卡采用 WIFI 6 标准，与我当前的路由器兼容性较差，三思后我便新买了张 WIFI 5 的卡。今天给新卡装驱动时，发现无法更改 WLAN 和 Bluetooth 的名称，后来发现是旧卡的驱动没有卸载。正常情况下，无法直接进入控制面板的卸载程序卸载驱动。若需要卸载掉设备的驱动，我采用了如下方法： 按住 \"Windows+R...",
+      "excerpt": "最近新组了台家用主机顺便兼当服务器用，然后配了个无线网卡。但由于原先的无线网卡采用 WIFI 6 标准，与我当前的路由器兼容性较差，三思后我便新买了张 WIFI 5 的卡。今天给新卡装驱动时，发现无法更改 WLAN 和 Bluetooth 的名称，后来发现是旧卡的驱动没有卸载。正常情况下，无法直接进入控制面板的卸载程序卸载驱动。若需要卸载掉设备的驱动，我采用了如下方法： 按住 \"Windows+R...",
+      "categories": [
+        {
+          "mid": "2",
+          "name": "技术杂谈",
+          "slug": "web",
+          "type": "category",
+          "description": null,
+          "count": 11,
+          "order": "2",
+          "parent": "0"
+        },
+        {
+          "mid": "8",
+          "name": "Windows",
+          "slug": "win",
+          "type": "category",
+          "description": null,
+          "count": 2,
+          "order": "6",
+          "parent": "2"
+        }
+      ],
+      "tags": [
+        "web",
+        "win"
+      ],
+      "body": "最近新组了台家用主机顺便兼当服务器用，然后配了个无线网卡。但由于原先的无线网卡采用 WIFI 6 标准，与我当前的路由器兼容性较差，三思后我便新买了张 WIFI 5 的卡。今天给新卡装驱动时，发现无法更改 WLAN 和 Bluetooth 的名称，后来发现是旧卡的驱动没有卸载。正常情况下，无法直接进入控制面板的卸载程序卸载驱动。若需要卸载掉设备的驱动，我采用了如下方法：\n\n- 按住 \"Windows+R\" 键，然后使用 \"Ctrl+Shift+Entrt\" 键以管理员身份运行\n\n- 输入命令 \"set devmgr show nonpresent devices=1\" 后回车\n\n- 输入命令 \"Start Devmgmt.msc\" 后回车\n\n- 对准Windows菜单 右键单击 ，选择设备管理器，然后编辑 \"查看→显示隐藏的设备\" 使隐藏的设备显示，然后可以根据名称判断哪些是旧卡的驱动，选择卸载设备/驱动即可。\n",
+      "url": "post.html?slug=3"
+    },
+    {
+      "cid": "1",
+      "title": "Hello, World.",
+      "slug": "start",
+      "date": "2019-11-29",
+      "modified": "2019-11-29",
+      "description": "经过了3个小时的努力，我终于把这台服务器配置好了。然后，“非常顺利”的搭建了Typecho。很高兴你能访问我的Space，我会不定时发布自己的动态的。",
+      "excerpt": "经过了3个小时的努力，我终于把这台服务器配置好了。然后，“非常顺利”的搭建了Typecho。很高兴你能访问我的Space，我会不定时发布自己的动态的。",
+      "categories": [
+        {
+          "mid": "1",
+          "name": "默认分类",
+          "slug": "default",
+          "type": "category",
+          "description": "只是一个默认分类",
+          "count": 10,
+          "order": "1",
+          "parent": "0"
+        }
+      ],
+      "tags": [
+        "default"
+      ],
+      "body": "经过了3个小时的努力，我终于把这台服务器配置好了。然后，“非常顺利”的搭建了Typecho。很高兴你能访问我的Space，我会不定时发布自己的动态的。\n",
+      "url": "post.html?slug=start"
+    }
+  ]
+}

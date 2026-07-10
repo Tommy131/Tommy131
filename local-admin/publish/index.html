@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章发布面板 | OwO Blog</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+  </head>
+  <body>
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow" id="editorMode">Publish</p>
+        <h1 id="editorTitle">文章发布面板</h1>
+      </div>
+      <div class="header-actions">
+        <a class="button ghost" href="/">工具首页</a>
+        <a class="button ghost" href="/manage/">管理面板</a>
+        <a class="button ghost" id="previewLink" href="/site/index.html" target="_blank">预览</a>
+        <button class="button danger" id="deletePostBtn" type="button">删除文章</button>
+        <button class="button" id="savePostBtn" type="button">保存文章</button>
+      </div>
+    </header>
+
+    <main class="admin-layout publish-layout">
+      <section class="editor panel">
+        <form class="post-form" id="postForm">
+          <div class="form-grid">
+            <label>标题<input id="postTitle" name="title" required></label>
+            <label>Slug<input id="postSlug" name="slug" required></label>
+            <label>日期<input id="postDate" name="date" type="date" required></label>
+          </div>
+          <label>摘要描述<input id="postDescription" name="description" placeholder="留空则自动取正文前 200 字"></label>
+          <label>分类标签</label>
+          <div class="check-grid" id="postCategories"></div>
+          <label>Markdown 正文<textarea id="postBody" name="body" spellcheck="false"></textarea></label>
+        </form>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" hidden></div>
+    <script src="../assets/js/publish.js"></script>
+  </body>
+</html>
