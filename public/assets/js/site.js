@@ -262,7 +262,7 @@
   };
 
   const loadSiteData = async () => {
-    const response = await fetch("/data/site.json", { cache: "no-cache" });
+    const response = await fetch("data/site.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   };

@@ -137,14 +137,14 @@ function shell({ title, description, page, body }) {
     <meta property="og:description" content="${description}">
     <meta property="og:type" content="website">
     <title>${title}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     ${PRISM}
   </head>
   <body data-page="${page}">
     <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <nav class="nav-shell" aria-label="主导航">
-        <a class="brand" href="index.html"><img class="brand-logo" src="/assets/img/logo.png" alt="OwO Blog logo"><span class="brand-text">Blog</span></a>
+        <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo.png" alt="OwO Blog logo"><span class="brand-text">OwOBlog</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span><span class="sr-only">打开菜单</span></button>
         <div class="site-menu" id="site-menu"><a href="index.html#blog">文章</a><a href="index.html#archive">归档</a><a href="index.html#projects">项目</a><a href="about.html">关于</a><button class="theme-toggle" type="button" aria-label="切换主题">Dark</button></div>
       </nav>
@@ -152,7 +152,7 @@ function shell({ title, description, page, body }) {
     ${body}
     <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
     <footer class="site-footer"><p>© 2026 Tommy131 / HanskiJay. Built for GitHub Pages.</p></footer>
-    <script src="/assets/js/site.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
   </body>
 </html>
 `;
