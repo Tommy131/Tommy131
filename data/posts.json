@@ -1,5 +1,32 @@
 [
   {
+    "cid": "local-owo-recorder-20261022",
+    "slug": "owo-recorder-from-idea-to-product",
+    "url": "post.html?slug=owo-recorder-from-idea-to-product",
+    "title": "从一个课堂翻译想法到 OwO! Recorder：我的本地优先学习工具开发记录",
+    "date": "2026-10-22",
+    "modified": "2026-10-22",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "2",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "OwO! Recorder 最开始并不是一个完整产品，而是一个很具体的想法：如果我在德语或英语课堂上听不懂某句话，能不能让电脑帮我把老师说的话实时转成文字和中文，同时把课堂内容保存下来，课后继续复习？ 这个想法看起来像“录音加翻译”，真正开始实现之后才发现，它同时涉及浏览器音频采集、实时通信、语音识别、机器翻译、本地模型运行、数据保存、任务恢复和硬件兼容。项目也因此从一个小工具逐渐变成了一套本地优...",
+    "source": "data/content/posts/owo-recorder-from-idea-to-product.md",
+    "description": "记录 OwO! Recorder 从课堂实时翻译的最初想法，逐步落地为本地优先的录音、转写、翻译和学习资料系统的过程。",
+    "tags": [
+      "web"
+    ]
+  },
+  {
     "cid": "35",
     "slug": "35",
     "url": "post.html?slug=35",
