@@ -1,5 +1,32 @@
 [
   {
+    "cid": "local-owo-recorder-architecture-20261022",
+    "slug": "owo-recorder-local-first-architecture",
+    "url": "post.html?slug=owo-recorder-local-first-architecture",
+    "title": "OwO! Recorder 的本地优先架构：浏览器、模型与数据如何协作",
+    "date": "2026-10-22",
+    "modified": "2026-10-22",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "2",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "第一篇文章记录了 OwO! Recorder 为什么开始，以及它如何从课堂翻译的想法逐步变成一套学习资料系统。这一篇继续往下拆，看看项目现在的各个部分如何协作。 我把当前架构称为“本地优先”，但它不是简单地把所有代码都塞进一台电脑。更准确的说法是：课堂模型和课堂内容尽量留在用户控制的设备上；服务端只承担身份、状态、同步、存储和受控调度等职责；每一层都明确自己拥有的数据和权限。 先看一条完整链路 一...",
+    "source": "data/content/posts/owo-recorder-local-first-architecture.md",
+    "description": "从浏览器采集到本地模型、任务队列和私有计算节点，拆解 OwO! Recorder 当前的本地优先架构与设计取舍。",
+    "tags": [
+      "web"
+    ]
+  },
+  {
     "cid": "local-owo-recorder-20261022",
     "slug": "owo-recorder-from-idea-to-product",
     "url": "post.html?slug=owo-recorder-from-idea-to-product",
