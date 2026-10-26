@@ -320,7 +320,14 @@
           <div class="hero-actions"><a class="button primary" href="#blog">阅读文章</a><a class="button ghost" href="https://github.com/Tommy131" rel="me">GitHub</a></div>
         </div>
         <aside class="stamp-card">
-          <div class="stamp" aria-hidden="true"><img src="assets/img/logo.png" alt=""><span class="stamp-ring"></span></div>
+          <div class="avatar-slot">
+            <p class="avatar-bubble" data-avatar-bubble hidden></p>
+            <button class="avatar-hit" type="button" data-avatar-greet aria-label="和 Tommy 打个招呼">
+              <img class="hero-avatar" src="assets/img/avatar.jpg" alt="">
+            </button>
+            <div class="avatar-sparks" data-avatar-sparks aria-hidden="true"></div>
+          </div>
+          <p class="sr-only" role="status" data-avatar-status></p>
           <p class="stamp-owner">${escapeHtml(site.owner)}</p>
           <ul class="meridians"><li>China</li><li>Germany</li></ul>
           <p class="stamp-meta">UTC+02</p>
@@ -431,6 +438,68 @@
   let shellReady = false;
   let updateReadingProgress = () => {};
 
+  const greetings = [
+    "你好，我是 Tommy。",
+    "欢迎来看我的笔记。",
+    "今天也在锻造工具。",
+    "用代码敲一敲，世界就多一件工具。",
+    "中国和德国，都在写代码。",
+    "想看项目的话，往下翻。",
+    "点开一篇文章，我们慢慢聊。",
+    "你好呀，最近在忙什么？",
+  ];
+
+  const burstSparks = (host) => {
+    if (!host || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    host.replaceChildren();
+    const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#315ec5";
+    const colors = [accent, "#f2c14b", "#fff7df", "#8eafff"];
+    for (let index = 0; index < 32; index += 1) {
+      const spark = document.createElement("span");
+      const angle = (Math.PI * 2 * index) / 32 + (Math.random() - 0.5) * 0.4;
+      const distance = 78 + Math.random() * 74;
+      spark.className = index % 4 === 0 ? "avatar-spark is-streak" : "avatar-spark";
+      spark.style.setProperty("--dx", `${Math.cos(angle) * distance}px`);
+      spark.style.setProperty("--dy", `${Math.sin(angle) * distance}px`);
+      spark.style.setProperty("--spark", colors[index % colors.length]);
+      spark.style.animationDelay = `${Math.floor(Math.random() * 70)}ms`;
+      host.append(spark);
+    }
+    window.setTimeout(() => host.replaceChildren(), 1100);
+  };
+
+  const bindAvatarGreeting = () => {
+    const button = document.querySelector("[data-avatar-greet]");
+    const bubble = document.querySelector("[data-avatar-bubble]");
+    const status = document.querySelector("[data-avatar-status]");
+    const sparks = button.parentElement?.querySelector("[data-avatar-sparks]");
+    if (!button || button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    let lastGreeting = "";
+    let bubbleTimer = 0;
+    const showGreeting = () => {
+      let next = greetings[Math.floor(Math.random() * greetings.length)];
+      if (greetings.length > 1) {
+        while (next === lastGreeting) next = greetings[Math.floor(Math.random() * greetings.length)];
+      }
+      lastGreeting = next;
+      if (bubble) {
+        bubble.textContent = next;
+        bubble.hidden = false;
+      }
+      if (status) status.textContent = next;
+      button.classList.remove("is-lit");
+      void button.offsetWidth;
+      button.classList.add("is-lit");
+      if (sparks) burstSparks(sparks);
+      window.clearTimeout(bubbleTimer);
+      bubbleTimer = window.setTimeout(() => {
+        if (bubble) bubble.hidden = true;
+      }, 4600);
+    };
+    button.addEventListener("click", showGreeting);
+  };
+
   const initInteractions = () => {
     bindFilters();
     updateReadingProgress();
@@ -494,7 +563,10 @@
     booting = true;
     try {
       const data = await loadSiteData();
-      if (document.body.dataset.page === "home") renderHome(data);
+      if (document.body.dataset.page === "home") {
+        renderHome(data);
+        bindAvatarGreeting();
+      }
       if (document.body.dataset.page === "post") renderPost(data);
       if (document.body.dataset.page === "about") renderAbout(data);
       initInteractions();
