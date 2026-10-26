@@ -3,8 +3,14 @@
   const savedTheme = localStorage.getItem("owo-theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
+  const syncThemeColor = () => {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", root.dataset.theme === "dark" ? "#12182a" : "#f3f5f8");
+  };
+
   if (savedTheme) root.dataset.theme = savedTheme;
   else if (prefersDark) root.dataset.theme = "dark";
+  syncThemeColor();
 
   if (window.Prism?.plugins?.autoloader) {
     window.Prism.plugins.autoloader.languages_path =
@@ -150,9 +156,15 @@
     const cells = rows.map(splitTableRow);
     const header = cells[0] || [];
     const body = cells.slice(2);
-    return `<table><thead><tr>${header.map((cell) => `<th>${renderInlineMarkdown(cell)}</th>`).join("")}</tr></thead><tbody>${body
+    return `<div class="table-scroll"><table><thead><tr>${header.map((cell) => `<th>${renderInlineMarkdown(cell)}</th>`).join("")}</tr></thead><tbody>${body
       .map((row) => `<tr>${row.map((cell) => `<td>${renderInlineMarkdown(cell)}</td>`).join("")}</tr>`)
-      .join("")}</tbody></table>`;
+      .join("")}</tbody></table></div>`;
+  };
+
+  const renderCodeBlock = (lang, source) => {
+    const safeLang = String(normalizeLanguage(lang)).replace(/[^a-z0-9-]/g, "") || "text";
+    const label = safeLang === "text" ? "" : `<span class="code-lang">${escapeHtml(safeLang)}</span>`;
+    return `<div class="code-block">${label}<pre class="language-${safeLang}"><code class="language-${safeLang}">${escapeHtml(source)}</code></pre></div>`;
   };
 
   const markdownToHtml = (markdown) => {
@@ -183,8 +195,7 @@
       const line = raw.trim();
       if (code) {
         if (/^```/.test(line)) {
-          const lang = normalizeLanguage(code.lang);
-          out.push(`<pre class="language-${lang}"><code class="language-${lang}">${escapeHtml(code.lines.join("\n"))}</code></pre>`);
+          out.push(renderCodeBlock(code.lang, code.lines.join("\n")));
           code = null;
         } else {
           code.lines.push(raw);
@@ -251,10 +262,7 @@
       paragraph.push(line);
     });
 
-    if (code) {
-      const lang = normalizeLanguage(code.lang);
-      out.push(`<pre class="language-${lang}"><code class="language-${lang}">${escapeHtml(code.lines.join("\n"))}</code></pre>`);
-    }
+    if (code) out.push(renderCodeBlock(code.lang, code.lines.join("\n")));
     closeParagraph();
     closeList();
     closeTable();
@@ -269,6 +277,13 @@
 
   const postUrl = (post) => `post.html?slug=${encodeURIComponent(post.slug)}`;
 
+  const heroTitleHtml = (title) => {
+    const text = String(title || "");
+    const parts = text.split(/(?<=[，,])/).map((part) => part.trim()).filter(Boolean);
+    const lines = parts.length > 1 ? parts : [text];
+    return lines.map((line) => `<span class="hero-line">${escapeHtml(line)}</span>`).join("");
+  };
+
   const renderHome = (data) => {
     const main = document.querySelector("[data-home-root]");
     if (!main) return;
@@ -279,33 +294,41 @@
     const cards = posts
       .slice(0, 6)
       .map(
-        (post) => `<article class="post-card reveal" data-tags="${(post.tags || []).map(escapeHtml).join(" ")}"><a href="${postUrl(post)}"><time class="post-date" datetime="${escapeHtml(post.date)}">${escapeHtml(post.date)}</time><div class="post-summary"><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.excerpt || "暂无摘要")}</p></div><span class="post-link">阅读全文 →</span></a></article>`
+        (post) => `<article class="post-card" data-tags="${(post.tags || []).map(escapeHtml).join(" ")}"><a href="${postUrl(post)}"><time class="post-date" datetime="${escapeHtml(post.date)}">${escapeHtml(post.date)}</time><div class="post-summary"><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.excerpt || "暂无摘要")}</p></div><span class="post-link">阅读全文</span></a></article>`
       )
       .join("");
     const archive = posts
       .map(
-        (post) => `<a class="archive-item reveal" href="${postUrl(post)}" data-tags="${(post.tags || []).map(escapeHtml).join(" ")}"><time datetime="${escapeHtml(post.date)}">${escapeHtml(post.date)}</time><span>${escapeHtml(post.title)}</span><small>${escapeHtml((post.categories || []).map((cat) => cat.name).join(" / ") || "未分类")}</small></a>`
+        (post) => `<a class="archive-item" href="${postUrl(post)}" data-tags="${(post.tags || []).map(escapeHtml).join(" ")}"><time datetime="${escapeHtml(post.date)}">${escapeHtml(post.date)}</time><span>${escapeHtml(post.title)}</span><small>${escapeHtml((post.categories || []).map((cat) => cat.name).join(" / ") || "未分类")}</small></a>`
       )
       .join("");
     const projects = site.projects
       .map(
-        (project) => `<a class="project-card reveal" href="${escapeHtml(project.url)}"><span>${escapeHtml(project.id)}</span><div><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.description)}</p></div></a>`
+        (project) => `<a class="project-card" href="${escapeHtml(project.url)}"><div><h3>${escapeHtml(project.title)}</h3><p>${escapeHtml(project.description)}</p></div><span class="project-open">打开</span></a>`
       )
       .join("");
+    const newestYear = String(posts[0]?.date || "").slice(0, 4);
+    const oldestYear = String(posts[posts.length - 1]?.date || "").slice(0, 4);
+    const archiveEyebrow = newestYear && oldestYear ? (newestYear === oldestYear ? newestYear : `${oldestYear}–${newestYear}`) : `${posts.length} 篇`;
 
     main.innerHTML = `
       <section class="hero section-frame" id="top">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <p class="eyebrow">${escapeHtml(site.hero.eyebrow)}</p>
-          <h1>${escapeHtml(site.hero.title)}</h1>
+          <h1 class="display">${heroTitleHtml(site.hero.title)}</h1>
           <p class="hero-lead">${escapeHtml(site.hero.lead)}</p>
           <div class="hero-actions"><a class="button primary" href="#blog">阅读文章</a><a class="button ghost" href="https://github.com/Tommy131" rel="me">GitHub</a></div>
         </div>
-        <aside class="hero-card reveal"><div class="orbital-card"><span class="status-dot"></span><p>${escapeHtml(site.owner)}</p><strong>China ↔ Germany</strong><small>UTC+02:00 · building useful things</small></div><div class="metric-grid"><div><strong>${posts.length}</strong><span>历史文章</span></div><div><strong>${categories.length}</strong><span>分类</span></div><div><strong>∞</strong><span>Ideas in progress</span></div></div></aside>
+        <aside class="stamp-card">
+          <div class="stamp" aria-hidden="true"><img src="assets/img/logo.png" alt=""><span class="stamp-ring"></span></div>
+          <p class="stamp-owner">${escapeHtml(site.owner)}</p>
+          <ul class="meridians"><li>China</li><li>Germany</li></ul>
+          <p class="stamp-meta">UTC+02</p>
+        </aside>
       </section>
-      <section class="section-frame" id="blog"><div class="section-heading reveal"><p class="eyebrow">Notebook</p><h2>最新文章</h2><p>这里会持续整理项目复盘、工程踩坑、工具设计和系统实践。</p></div><div class="filter-row reveal"><button class="filter-chip active" type="button" data-filter="all">全部</button>${chips}</div><div class="blog-grid">${cards}</div></section>
-      <section class="section-frame" id="archive"><div class="section-heading reveal"><p class="eyebrow">Archive</p><h2>全部归档</h2><p>按发布时间倒序排列，共 ${posts.length} 篇。</p></div><div class="archive-list">${archive}</div></section>
-      <section class="section-frame" id="projects"><div class="section-heading reveal"><p class="eyebrow">Forge</p><h2>精选项目</h2></div><div class="project-list">${projects}</div></section>`;
+      <section class="section-frame" id="blog"><div class="section-heading"><p class="eyebrow">${posts.length} notes</p><h2>最新文章</h2><p>这里会持续整理项目复盘、工程踩坑、工具设计和系统实践。</p></div><div class="filter-row"><button class="filter-chip active" type="button" data-filter="all">全部</button>${chips}</div><div class="filter-feedback"><p class="filter-status" role="status" data-filter-status></p><button class="button ghost" type="button" data-clear-filter hidden>查看全部</button></div><div class="blog-grid">${cards}</div></section>
+      <section class="section-frame" id="archive"><div class="section-heading"><p class="eyebrow">${escapeHtml(archiveEyebrow)}</p><h2>全部归档</h2><p>按发布时间倒序排列，共 ${posts.length} 篇。</p></div><div class="archive-list">${archive}</div></section>
+      <section class="section-frame" id="projects"><div class="section-heading"><p class="eyebrow">${site.projects.length} tools</p><h2>精选项目</h2></div><div class="project-list">${projects}</div></section>`;
   };
 
   const renderPost = (data) => {
@@ -314,14 +337,14 @@
     const slug = new URLSearchParams(window.location.search).get("slug");
     const post = data.posts.find((item) => item.slug === slug) || data.posts[0];
     if (!post) {
-      main.innerHTML = '<section class="article-shell reveal in-view"><h1>没有可显示的文章</h1></section>';
+      main.innerHTML = '<section class="article-shell"><h1>没有可显示的文章</h1><p>归档里还没有可以打开的文章。</p><a class="button primary" href="index.html">返回首页</a></section>';
       return;
     }
     document.title = `${post.title} | OwO Blog`;
     const description = document.querySelector('meta[name="description"]');
     if (description) description.setAttribute("content", post.description || post.excerpt || "");
     const tags = (post.categories || []).map((cat) => `<span>${escapeHtml(cat.name)}</span>`).join("");
-    main.innerHTML = `<article class="article-shell reveal">
+    main.innerHTML = `<article class="article-shell">
         <a class="breadcrumb" href="index.html#archive">← 返回文章归档</a>
         <header class="article-header">
           <p class="eyebrow">${escapeHtml(post.date || "Markdown")}</p>
@@ -337,7 +360,7 @@
     const main = document.querySelector("[data-about-root]");
     if (!main) return;
     const about = data.site.about;
-    main.innerHTML = `<article class="article-shell reveal"><a class="breadcrumb" href="index.html">← 返回首页</a><header class="article-header"><p class="eyebrow">${escapeHtml(about.eyebrow)}</p><h1>${escapeHtml(about.title)}</h1></header><div class="article-content">${about.body.map((item) => `<p>${escapeHtml(item)}</p>`).join("")}</div></article>`;
+    main.innerHTML = `<article class="article-shell"><a class="breadcrumb" href="index.html">← 返回首页</a><header class="article-header"><p class="eyebrow">${escapeHtml(about.eyebrow)}</p><h1>${escapeHtml(about.title)}</h1></header><div class="article-content">${about.body.map((item) => `<p>${escapeHtml(item)}</p>`).join("")}</div></article>`;
   };
 
   const redirectLegacyPost = () => {
@@ -353,9 +376,67 @@
     document.querySelectorAll(".theme-toggle").forEach((button) => {
       button.textContent = isDark ? "Light" : "Dark";
     });
+    syncThemeColor();
   };
 
+  const applyFilter = (filter) => {
+    const name = filter || "all";
+    document.querySelectorAll(".filter-chip").forEach((chip) => {
+      chip.classList.toggle("active", chip.dataset.filter === name);
+    });
+    let visible = 0;
+    let visibleCards = 0;
+    document.querySelectorAll(".archive-item").forEach((card) => {
+      const tags = card.dataset.tags || "";
+      const hide = name !== "all" && !tags.split(/\s+/).includes(name);
+      card.classList.toggle("is-hidden", hide);
+      if (!hide) visible += 1;
+    });
+    document.querySelectorAll(".post-card").forEach((card) => {
+      const tags = card.dataset.tags || "";
+      const hide = name !== "all" && !tags.split(/\s+/).includes(name);
+      card.classList.toggle("is-hidden", hide);
+      if (!hide) visibleCards += 1;
+    });
+    const status = document.querySelector("[data-filter-status]");
+    const clear = document.querySelector("[data-clear-filter]");
+    if (!status) return;
+    if (visible === 0) status.textContent = "这个分类还没有文章。";
+    else if (visibleCards === 0) status.textContent = `显示 ${visible} 篇。文章在下方归档。`;
+    else status.textContent = `显示 ${visible} 篇。`;
+    status.classList.toggle("sr-only", name === "all");
+    if (clear) clear.hidden = visible !== 0;
+  };
+
+  const bindFilters = () => {
+    document.querySelectorAll(".filter-chip").forEach((button) => {
+      if (button.dataset.bound === "true") return;
+      button.dataset.bound = "true";
+      button.addEventListener("click", () => applyFilter(button.dataset.filter));
+    });
+    const clear = document.querySelector("[data-clear-filter]");
+    if (clear && clear.dataset.bound !== "true") {
+      clear.dataset.bound = "true";
+      clear.addEventListener("click", () => applyFilter("all"));
+    }
+  };
+
+  const loadingMessage = () => {
+    const page = document.body.dataset.page;
+    if (page === "post") return "正在加载文章...";
+    if (page === "about") return "正在加载关于页面...";
+    return "正在加载博客数据...";
+  };
+
+  let shellReady = false;
+  let updateReadingProgress = () => {};
+
   const initInteractions = () => {
+    bindFilters();
+    updateReadingProgress();
+    if (shellReady) return;
+    shellReady = true;
+
     document.querySelectorAll(".theme-toggle").forEach((button) => {
       button.addEventListener("click", () => {
         const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
@@ -375,43 +456,42 @@
       });
     }
 
-    document.querySelectorAll(".filter-chip").forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-        document.querySelectorAll(".filter-chip").forEach((chip) => chip.classList.remove("active"));
-        button.classList.add("active");
-        document.querySelectorAll(".post-card, .archive-item").forEach((card) => {
-          const tags = card.dataset.tags || "";
-          card.classList.toggle("is-hidden", filter !== "all" && !tags.split(/\s+/).includes(filter));
-        });
-      });
-    });
-
     const backToTop = document.querySelector(".back-to-top");
     if (backToTop) {
-      window.addEventListener("scroll", () => backToTop.classList.toggle("visible", window.scrollY > 560));
-      backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      window.addEventListener("scroll", () => backToTop.classList.toggle("visible", window.scrollY > 560), { passive: true });
+      backToTop.addEventListener("click", () => {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      });
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.14 }
-    );
-    document.querySelectorAll(".reveal").forEach((element, index) => {
-      element.style.transitionDelay = `${Math.min(index * 45, 240)}ms`;
-      observer.observe(element);
-    });
+    const bar = document.querySelector("[data-reading-progress]");
+    if (bar && document.body.dataset.page === "post") {
+      const span = bar.querySelector("span");
+      updateReadingProgress = () => {
+        const article = document.querySelector(".article-content");
+        if (!article || !span) {
+          bar.hidden = true;
+          return;
+        }
+        bar.hidden = false;
+        const start = article.offsetTop - 96;
+        const distance = Math.max(article.offsetHeight - window.innerHeight * 0.45, 1);
+        const progress = Math.min(1, Math.max(0, (window.scrollY - start) / distance));
+        span.style.transform = `scaleX(${progress})`;
+      };
+      window.addEventListener("scroll", updateReadingProgress, { passive: true });
+      window.addEventListener("resize", updateReadingProgress);
+      updateReadingProgress();
+    }
   };
 
+  let booting = false;
+
   const boot = async () => {
+    if (booting) return;
     if (document.body.dataset.page === "not-found" && redirectLegacyPost()) return;
+    booting = true;
     try {
       const data = await loadSiteData();
       if (document.body.dataset.page === "home") renderHome(data);
@@ -420,8 +500,18 @@
       initInteractions();
     } catch (error) {
       const target = document.querySelector("main");
-      if (target) target.innerHTML = `<p class="markdown-status">站点数据加载失败：${escapeHtml(error.message)}</p>`;
-      initInteractions();
+      if (document.body.dataset.page === "not-found") {
+        initInteractions();
+      } else if (target) {
+        target.innerHTML = `<div class="load-failure"><p class="markdown-status" role="alert">站点数据加载失败：${escapeHtml(error.message)}</p><button class="button primary" type="button" data-retry>重试</button></div>`;
+        target.querySelector("[data-retry]")?.addEventListener("click", () => {
+          target.innerHTML = `<p class="markdown-status" role="status">${loadingMessage()}</p>`;
+          boot();
+        });
+        initInteractions();
+      }
+    } finally {
+      booting = false;
     }
   };
 

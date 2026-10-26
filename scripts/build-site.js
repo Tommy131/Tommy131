@@ -132,13 +132,26 @@ function shell({ title, description, page, body }) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${description}">
-    <meta name="theme-color" content="#101820">
+    <meta name="theme-color" content="#f3f5f8">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
     <meta property="og:type" content="website">
     <title>${title}</title>
+    <link rel="icon" href="assets/img/logo.png">
+    <link rel="preload" href="assets/fonts/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
     ${PRISM}
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("owo-theme");
+          var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          if (theme === "dark" || theme === "light") document.documentElement.dataset.theme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", theme === "dark" ? "#12182a" : "#f3f5f8");
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body data-page="${page}">
     <a class="skip-link" href="#main">跳到正文</a>
@@ -148,6 +161,7 @@ function shell({ title, description, page, body }) {
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span><span class="sr-only">打开菜单</span></button>
         <div class="site-menu" id="site-menu"><a href="index.html#blog">文章</a><a href="index.html#archive">归档</a><a href="index.html#projects">项目</a><a href="about.html">关于</a><button class="theme-toggle" type="button" aria-label="切换主题">Dark</button></div>
       </nav>
+      <div class="reading-progress" data-reading-progress hidden><span></span></div>
     </header>
     ${body}
     <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
@@ -163,7 +177,7 @@ function renderHome() {
     title: "OwO Blog | Tommy131 / HanskiJay",
     description: "Tommy131 / HanskiJay 的个人博客，记录全栈开发、系统工具、安全实践与生活碎片。",
     page: "home",
-    body: `<main id="main" data-home-root><p class="markdown-status">正在加载博客数据...</p></main>`,
+    body: `<main id="main" data-home-root><p class="markdown-status" role="status">正在加载博客数据...</p></main>`,
   });
 }
 
@@ -172,7 +186,7 @@ function renderPost() {
     title: "文章 | OwO Blog",
     description: "OwO Blog article",
     page: "post",
-    body: `<main class="article-main" id="main" data-post-root><p class="markdown-status">正在加载文章...</p></main>`,
+    body: `<main class="article-main" id="main" data-post-root><p class="markdown-status" role="status">正在加载文章...</p></main>`,
   });
 }
 
@@ -181,7 +195,7 @@ function renderAbout() {
     title: "关于 | OwO Blog",
     description: "关于 Tommy131 / HanskiJay 与 OwO Blog。",
     page: "about",
-    body: `<main class="article-main" id="main" data-about-root><p class="markdown-status">正在加载关于页面...</p></main>`,
+    body: `<main class="article-main" id="main" data-about-root><p class="markdown-status" role="status">正在加载关于页面...</p></main>`,
   });
 }
 
@@ -190,7 +204,7 @@ function renderNotFound() {
     title: "页面不存在 | OwO Blog",
     description: "页面不存在",
     page: "not-found",
-    body: `<main class="article-main" id="main" data-404-root><section class="article-shell reveal in-view"><p class="eyebrow">404</p><h1>这页还没有被锻造出来。</h1><p>链接可能已经移动，或文章正在整理中。</p><a class="button primary" href="index.html">返回首页</a></section></main>`,
+    body: `<main class="article-main" id="main" data-404-root><section class="not-found-shell"><div class="stamp" aria-hidden="true"><img src="assets/img/logo.png" alt=""><span class="stamp-ring"></span></div><div class="not-found-copy"><p class="eyebrow">404</p><h1 class="display">这页还没有被锻造出来。</h1><p>链接可能已经移动，或文章正在整理中。</p><a class="button primary" href="index.html">返回首页</a></div></section></main>`,
   });
 }
 

@@ -1,25 +1,32 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/jetbrains-mono-latin-400.woff2") format("woff2");
+}
+
 :root {
   color-scheme: dark;
-  --bg: #111a1b;
-  --surface: #192324;
-  --surface-muted: #223031;
-  --ink: #eef2e8;
-  --muted: #aebbb3;
-  --line: #394947;
-  --accent: #e87955;
-  --teal: #7bc7b4;
-  --danger: #f18179;
+  --bg: #12182a;
+  --surface: #1a2340;
+  --surface-muted: #243056;
+  --ink: #e7eef8;
+  --muted: #a9b7cc;
+  --line: #31405f;
+  --accent: #8eafff;
+  --teal: var(--accent);
+  --danger: #ff8d86;
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
   --max-width: 1320px;
-  --font-body: "Segoe UI", "Microsoft YaHei", sans-serif;
-  --font-mono: "Cascadia Code", Consolas, monospace;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
 }
 
 * { box-sizing: border-box; }
 body { min-height: 100vh; margin: 0; color: var(--ink); font-family: var(--font-body); background: var(--bg); }
-body::before { position: fixed; inset: 0; z-index: -1; pointer-events: none; content: ""; opacity: 0.2; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(to bottom, black, transparent 65%); }
 button, input, textarea, select { font: inherit; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
