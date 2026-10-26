@@ -1,5 +1,32 @@
 [
   {
+    "cid": "local-owo-recorder-live-audio-20261026",
+    "slug": "owo-recorder-live-audio-to-captions",
+    "url": "post.html?slug=owo-recorder-live-audio-to-captions",
+    "title": "OwO! Recorder 实时课堂链路：从浏览器音频到字幕事件",
+    "date": "2026-10-26",
+    "modified": "2026-10-26",
+    "commentsNum": "0",
+    "categories": [
+      {
+        "mid": "2",
+        "name": "技术杂谈",
+        "slug": "web",
+        "type": "category",
+        "description": null,
+        "count": 0,
+        "order": "2",
+        "parent": "0"
+      }
+    ],
+    "excerpt": "前两篇文章分别介绍了 OwO! Recorder 的起点和本地优先架构。这一篇进入最核心、也最容易被误解的部分：一段课堂声音到底是怎样从浏览器走到用户眼前的字幕的。 表面上，这条链路像是“录音 识别 翻译 显示”。实际运行时，它更接近一组相互独立但必须协作的状态机：浏览器负责采集和有限缓存，WebSocket 负责传输，服务端负责确认和持久化，ASR 负责识别窗口，翻译负责补充结果，前端最后只渲染...",
+    "source": "data/content/posts/owo-recorder-live-audio-to-captions.md",
+    "description": "拆解 OwO! Recorder 如何采集浏览器音频、通过 WebSocket 可靠传输、进入服务端缓冲，再经过 ASR 和翻译变成实时字幕。",
+    "tags": [
+      "web"
+    ]
+  },
+  {
     "cid": "local-owo-recorder-architecture-20261022",
     "slug": "owo-recorder-local-first-architecture",
     "url": "post.html?slug=owo-recorder-local-first-architecture",
