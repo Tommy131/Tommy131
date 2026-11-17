@@ -17,10 +17,9 @@
 
 我是一名全栈开发者，专注于创建高质量的开源项目和实用工具。我热衷于解决实际问题，并通过代码让生活更便利。
 
-- 🔧 **Tech Stack:** Go, PHP, Dart, JavaScript, Java, Shell Scripting, OpenSSL
 - 🌐 **Fields:** Web Development, API Development, System Tools, Security Tools
-- 📝 **Blog:** [owoblog.com](http://owoblog.com)
-- 📧 **Contact:** Through GitHub Issues or my blog
+- 📝 **Blog:** [hanskijay.dev](https://hanskijay.dev)
+- 📧 **Contact:** <support@owoblog.com>
 
 ## 📈 GitHub Stats
 
