@@ -3,7 +3,7 @@
 **🔨 Use a Hammer to create the world**
 
 [![GitHub followers](https://img.shields.io/github/followers/Tommy131?style=social)](https://github.com/Tommy131)
-[![Website](https://img.shields.io/badge/Website-owoblog.com-blue)](https://hanskijay.dev)
+[![Website](https://img.shields.io/badge/Website-hanskijay.dev-blue)](https://hanskijay.dev)
 [![Instagram](https://img.shields.io/badge/Instagram-jay.jay2045-E4405F)](https://www.instagram.com/jay.jay2045)
 
 🌍 **Location:** China & Germany
@@ -17,7 +17,9 @@
 
 我是一名全栈开发者，专注于创建高质量的开源项目和实用工具。我热衷于解决实际问题，并通过代码让生活更便利。
 
-- 🌐 **Fields:** Web Development, API Development, System Tools, Security Tools
+I am a full-stack developer focused on creating high-quality open-source projects and practical tools. I am passionate about solving real-world problems and using code to make life more convenient.
+
+- 🌐 **Fields:** Web, API, Software, Hardware Development, System Tools, Security Tools, Full Stack
 - 📝 **Blog:** [hanskijay.dev](https://hanskijay.dev)
 - 📧 **Contact:** <support@owoblog.com>
 
@@ -33,8 +35,10 @@
 
 ## 🔥 What I'm Working On
 
-- 🚀 **OwO-WinDeployer**: 打造极致简洁的离线 Windows 部署工具。
-- 🛩️ **OwO-FlightAssistant**: 开发强大的跨平台 CLI 与智能助手。
+- 🚀 **[OwO! WinDeployer](https://github.com/Tommy131/OwO-WinDeployer)**: 打造极致简洁的在线 + 离线 Windows 部署 & 迁移工具。
+- 🛩️ **[OwO! FlightAssistant](https://github.com/Tommy131/OwO-FlightAssistant)**: 一款开发强大的智能飞行助手，可跨平台运行，并且有 CLI + WebGUI两种模式可选。
+- 🛩️ **[OwO! Recorder](https://record.owoserver.com)**: 完全运行在个人本地设备的实时翻译系统。
+- 🛩️ **[OwO! TravelAI](https://travelai.owoserver.com)**: 完全运行在个人移动设备的、强大的、主攻离线模式场景下运行的智能旅游助手。
 - and some private repos...
 
 ## 📦 Tech Stack & Tools
